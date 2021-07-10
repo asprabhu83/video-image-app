@@ -38,9 +38,8 @@ class ConvertVideoForStreaming implements ShouldQueue
     {
         // create a video format...
         $lowBitrateFormat = (new X264('libmp3lame', 'libx264'))->setKiloBitrate(500);
- 
         $converted_name = $this->getCleanFileName($this->video->path);
-        echo $this->video->disk, $this->video->path;
+        
         $media = FFMpeg::fromDisk($this->video->disk)
         ->open($this->video->path);
         $media->save(new FFMpeg\Format\Video\X264('libmp3lame', 'libx264'), $converted_name );
