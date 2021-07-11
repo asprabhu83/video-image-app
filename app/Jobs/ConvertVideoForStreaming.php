@@ -54,6 +54,8 @@ class ConvertVideoForStreaming implements ShouldQueue
           config(['filesystems.disk.' . $diskName => [
               'driver' => 'local',
               'root' => storage_path('app/public/' . $diskName),
+              'url' => env('APP_URL').'/storage',
+              'visibility' => 'public'
           ]]);
     }
 
