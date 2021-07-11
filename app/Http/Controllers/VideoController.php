@@ -31,8 +31,23 @@ class VideoController extends Controller
     public function store(Request $request)
     {
 
-        $request->video->storeAs('public', $request->video->getClientOriginalName());
+        $validator = Validator::make($request->all(), 
+              [ 
+              'user_id' => 'required',
+              'file' => 'required',
+             ]);   
  
+    if ($validator->fails()) {          
+            return response()->json(['error'=>$validator->errors()], 401);                        
+         }  
+ 
+  
+        if ($files = $request->file('file')) {
+             
+            //store file into document folder
+            $file = $request->file->store('public/videos');
+        }
+            //store your file into database
         $video = Video::create([
             'disk'          => 'public',
             'original_name' => $request->video->getClientOriginalName(),
@@ -40,7 +55,7 @@ class VideoController extends Controller
             'title'         => $request->title,
         ]);
  
-        ConvertVideoForStreaming::dispatch($video);
+       // ConvertVideoForStreaming::dispatch($video);
         return response()->json([
             "success" => true,
             "message" => "File successfully uploaded",
