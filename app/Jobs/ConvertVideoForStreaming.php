@@ -40,16 +40,21 @@ class ConvertVideoForStreaming implements ShouldQueue
         $media = FFMpeg::fromDisk($this->video->disk)
         ->open($this->video->path);
         $durationInSeconds = $media->getDurationInSeconds();
-        echo $durationInSeconds;
+        $this->addNewDisk($current_timestamp);
         for ($secs = 0; $secs <= $durationInSeconds; $secs++) {
             $media = $media->getFrameFromSeconds($secs)
                 ->export()
-                ->toDisk('public'.'/'.$current_timestamp)
+                ->toDisk($current_timestamp)
                 ->save("thumb_{$secs}.jpg");
           }
     }
- 
-    private function getCleanFileName($filename){
-        return preg_replace('/\\.[^.\\s]{3,4}$/', '', $filename) . '.mp4';
+
+    private function addNewDisk(string $diskName) 
+    {
+          config(['filesystems.disk.' . $diskName => [
+              'driver' => 'local',
+              'root' => storage_path('app/public/' . $diskName),
+          ]]);
     }
+
 }
