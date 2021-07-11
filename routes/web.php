@@ -15,5 +15,5 @@ use App\Http\Controllers\VideoController;
 
     Route::get('/', [VideoController::class, 'index']);
     Route::get('/uploader', [VideoController::class, 'uploader'])->name('uploader');
-    Route::post('/upload', [VideoController::class, 'store'])->name('upload');
+    
 
