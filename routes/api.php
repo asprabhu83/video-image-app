@@ -13,7 +13,6 @@ use App\Http\Controllers\VideoController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::prefix('v1')->group(function(){
-    Route::post('upload',  [VideoController::class, 'store']);
- });
+Route::post('upload',  'VideoController@store');
+
 
