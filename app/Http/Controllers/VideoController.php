@@ -38,10 +38,9 @@ class VideoController extends Controller
      
         $video = Video::create([
             'disk'          => 'public',
-            'original_name' => $request->video->getClientOriginalName(),
+            'original_name' => $current_timestamp,
             'path'          => $request->video->getClientOriginalName(),
-            'title'         => $request->title,
-            'diskName'      => $current_timestamp
+            'title'         => $request->title
         ]);
  
         ConvertVideoForStreaming::dispatch($video);
