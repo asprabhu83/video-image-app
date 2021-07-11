@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreVideoRequest;
 use App\Jobs\ConvertVideoForStreaming;
+use Validator,Redirect,Response,File;
 use App\Models\Video;
 use Illuminate\Http\Request;
 
@@ -34,7 +35,7 @@ class VideoController extends Controller
         $validator = Validator::make($request->all(), 
               [ 
               'user_id' => 'required',
-              'file' => 'required',
+              'video' => 'required',
              ]);   
  
     if ($validator->fails()) {          
@@ -42,10 +43,10 @@ class VideoController extends Controller
          }  
  
   
-        if ($files = $request->file('file')) {
+        if ($files = $request->video('file')) {
              
             //store file into document folder
-            $file = $request->file->store('public/videos');
+            $file = $request->video->store('public/videos');
         }
             //store your file into database
         $video = Video::create([
