@@ -10,6 +10,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
@@ -39,11 +40,14 @@ class ConvertVideoForStreaming implements ShouldQueue
         $media = FFMpeg::fromDisk($this->video->disk)
         ->open($this->video->path);
         $durationInSeconds = $media->getDurationInSeconds();
-       
+        $diskName = Storage::build([
+            'driver' => 'local',
+            'root' => storage_path('app/public/' . $this->video->diskName),
+        ]);
         for ($secs = 0; $secs <= $durationInSeconds; $secs++) {
             $media = $media->getFrameFromSeconds($secs)
                 ->export()
-                ->toDisk($this->video->$diskName)
+                ->toDisk($diskName)
                 ->save("thumb_{$secs}.jpg");
           }
     }
