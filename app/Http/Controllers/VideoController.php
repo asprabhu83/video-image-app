@@ -28,7 +28,7 @@ class VideoController extends Controller
      * @param StoreVideoRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(StoreVideoRequest $request)
+    public function store(Request $request)
     {
 
        /* $request->video->storeAs('public', $request->video->getClientOriginalName());
