@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreVideoRequest;
 use App\Jobs\ConvertVideoForStreaming;
 use App\Models\Video;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class VideoController extends Controller
@@ -32,19 +33,24 @@ class VideoController extends Controller
     {
         $path = str_random(16) . '.' . $request->video->getClientOriginalExtension();
         $request->video->storeAs('public', $request->video->getClientOriginalName());
- 
+        $current_timestamp = Carbon::now()->timestamp;
+        $diskName = Storage::build([
+            'driver' => 'local',
+            'root' => storage_path('app/public/' . $current_timestamp),
+        ]);
         $video = Video::create([
             'disk'          => 'public',
             'original_name' => $request->video->getClientOriginalName(),
             'path'          => $request->video->getClientOriginalName(),
             'title'         => $request->title,
+            'diskName'      => $diskName
         ]);
  
         ConvertVideoForStreaming::dispatch($video);
-        return redirect('/uploader')
-            ->with(
-                'message',
-                'Your video will be available shortly after we process it'
-            );
+        return response()->json([
+            "success" => true,
+            "message" => "File successfully uploaded",
+            "diskName" => $diskName
+        ]);
     }
 }

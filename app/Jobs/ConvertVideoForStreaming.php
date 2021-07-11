@@ -37,18 +37,14 @@ class ConvertVideoForStreaming implements ShouldQueue
      */
     public function handle()
     {
-        $current_timestamp = Carbon::now()->timestamp;
         $media = FFMpeg::fromDisk($this->video->disk)
         ->open($this->video->path);
         $durationInSeconds = $media->getDurationInSeconds();
-        $diskName = Storage::build([
-            'driver' => 'local',
-            'root' => storage_path('app/public/' . $current_timestamp),
-        ]);
+       
         for ($secs = 0; $secs <= $durationInSeconds; $secs++) {
             $media = $media->getFrameFromSeconds($secs)
                 ->export()
-                ->toDisk($diskName)
+                ->toDisk($this->video->$diskName)
                 ->save("thumb_{$secs}.jpg");
           }
     }
