@@ -36,20 +36,15 @@ class ConvertVideoForStreaming implements ShouldQueue
      */
     public function handle()
     {
-        // create a video format...
-        $lowBitrateFormat = (new X264('libmp3lame', 'libx264'))->setKiloBitrate(500);
-      //  $converted_name = $this->getCleanFileName($this->video->path);
-        
+        $current_timestamp = Carbon::now()->timestamp;
         $media = FFMpeg::fromDisk($this->video->disk)
         ->open($this->video->path);
-    //    $media->save(new FFMpeg\Format\Video\X264('libmp3lame', 'libx264'), $converted_name );
-
         $durationInSeconds = $media->getDurationInSeconds();
         echo $durationInSeconds;
         for ($secs = 0; $secs <= $durationInSeconds; $secs++) {
             $media = $media->getFrameFromSeconds($secs)
                 ->export()
-                ->toDisk('local')
+                ->toDisk('public'.'/'.$current_timestamp)
                 ->save("thumb_{$secs}.jpg");
           }
     }
