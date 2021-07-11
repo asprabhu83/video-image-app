@@ -28,12 +28,22 @@ class VideoController extends Controller
      * @param StoreVideoRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store(StoreVideoRequest $request)
     {
-      return response()->json([
-          "success" => true,
-          "message" => "File successfully uploaded"
-      ]);
-     
+        $request->video->storeAs('public', $request->video->getClientOriginalName());
+ 
+        $video = Video::create([
+            'disk'          => 'public',
+            'original_name' => $request->video->getClientOriginalName(),
+            'path'          => $request->video->getClientOriginalName(),
+            'title'         => $request->title,
+        ]);
+ 
+        ConvertVideoForStreaming::dispatch($video);
+        return response()->json([
+            "success" => true,
+            "message" => "File successfully uploaded",
+            "file" => $file
+        ]);
     }
 }
