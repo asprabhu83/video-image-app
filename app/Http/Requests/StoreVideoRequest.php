@@ -24,7 +24,6 @@ class StoreVideoRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
             'video' => 'required'
         ];
     }
