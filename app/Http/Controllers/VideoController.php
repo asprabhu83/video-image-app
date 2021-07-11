@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreVideoRequest;
 use App\Jobs\ConvertVideoForStreaming;
-use Validator,Redirect,Response,File;
 use App\Models\Video;
 use Illuminate\Http\Request;
 
@@ -29,26 +28,11 @@ class VideoController extends Controller
      * @param StoreVideoRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store(StoreVideoRequest $request)
     {
-
-        $validator = Validator::make($request->all(), 
-              [ 
-              'title' => 'required',
-              'video' => 'required',
-             ]);   
+        $path = str_random(16) . '.' . $request->video->getClientOriginalExtension();
+        $request->video->storeAs('public', $request->video->getClientOriginalName());
  
-    if ($validator->fails()) {          
-            return response()->json(['error'=>$validator->errors()], 401);                        
-         }  
- 
-  
-        if ($files = $request->video('file')) {
-             
-            //store file into document folder
-            $file = $request->video->store('public/videos');
-        }
-            //store your file into database
         $video = Video::create([
             'disk'          => 'public',
             'original_name' => $request->video->getClientOriginalName(),
@@ -56,11 +40,11 @@ class VideoController extends Controller
             'title'         => $request->title,
         ]);
  
-       // ConvertVideoForStreaming::dispatch($video);
-        return response()->json([
-            "success" => true,
-            "message" => "File successfully uploaded",
-            "file" => $request
-        ]);
+        ConvertVideoForStreaming::dispatch($video);
+        return redirect('/uploader')
+            ->with(
+                'message',
+                'Your video will be available shortly after we process it'
+            );
     }
 }
