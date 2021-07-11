@@ -34,7 +34,7 @@ class VideoController extends Controller
 
         $validator = Validator::make($request->all(), 
               [ 
-              'user_id' => 'required',
+              'title' => 'required',
               'video' => 'required',
              ]);   
  
