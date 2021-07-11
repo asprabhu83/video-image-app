@@ -43,7 +43,7 @@ class ConvertVideoForStreaming implements ShouldQueue
         $durationInSeconds = $media->getDurationInSeconds();
         $diskName = Storage::build([
             'driver' => 'local',
-            'root' => storage_path('app/public/' . $diskName),
+            'root' => storage_path('app/public/' . $current_timestamp),
         ]);
         for ($secs = 0; $secs <= $durationInSeconds; $secs++) {
             $media = $media->getFrameFromSeconds($secs)
