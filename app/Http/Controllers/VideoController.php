@@ -31,7 +31,7 @@ class VideoController extends Controller
     public function store(Request $request)
     {
 
-       /* $request->video->storeAs('public', $request->video->getClientOriginalName());
+        $request->video->storeAs('public', $request->video->getClientOriginalName());
  
         $video = Video::create([
             'disk'          => 'public',
@@ -40,7 +40,7 @@ class VideoController extends Controller
             'title'         => $request->title,
         ]);
  
-        ConvertVideoForStreaming::dispatch($video);*/
+        ConvertVideoForStreaming::dispatch($video);
         return response()->json([
             "success" => true,
             "message" => "File successfully uploaded",
