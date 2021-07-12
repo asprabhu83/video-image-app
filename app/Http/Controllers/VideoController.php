@@ -33,7 +33,7 @@ class VideoController extends Controller
     public function store(StoreVideoRequest $request)
     {
         $disk = Storage::disk('public');
-        $disk->put($request->video->getClientOriginalName(), fopen($request->video->getClientOriginalName(), 'r+'));
+        $disk->put($request->video->getClientOriginalName(), fopen($request->video, 'r+'));
         $current_timestamp = Carbon::now()->timestamp;
      
         $video = Video::create([
