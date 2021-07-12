@@ -48,11 +48,9 @@ class ConvertVideoForStreaming implements ShouldQueue
             $media = $media->getFrameFromSeconds($secs)
                 ->export()
                 ->toDisk($diskName)
-                ->save("thumb_{$secs}.jpg")
-                ->onProgress(function ($percentage) {
-                    echo "{$percentage}% converted";
-                });
+                ->save("thumb_{$secs}.jpg");
           }
+          
     }
 
 
