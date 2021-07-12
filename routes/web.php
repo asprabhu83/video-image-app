@@ -13,7 +13,5 @@ use App\Http\Controllers\VideoController;
 |
 */
 
-    Route::get('/', [VideoController::class, 'index']);
-    Route::get('/uploader', [VideoController::class, 'uploader'])->name('uploader');
-    
+Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 
