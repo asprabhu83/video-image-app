@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreVideoRequest;
 use App\Jobs\ConvertVideoForStreaming;
 use App\Models\Video;
-
+use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -33,7 +33,7 @@ class VideoController extends Controller
     public function store(StoreVideoRequest $request)
     {
         $disk = Storage::disk('public');
-        $disk->put($targetFile, fopen($request->video->getClientOriginalName(), 'r+'));
+        $disk->put($request->video->getClientOriginalName(), fopen($request->video->getClientOriginalName(), 'r+'));
         $current_timestamp = Carbon::now()->timestamp;
      
         $video = Video::create([
