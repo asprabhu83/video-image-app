@@ -47,7 +47,7 @@ class VideoController extends Controller
         return response()->json([
             "success" => true,
             "message" => "File successfully uploaded",
-            "files" => Storage::disk('public')->allFiles($current_timestamp)
+            "files" => Storage::disk('publicUploads')->allFiles($current_timestamp)
         ]);
     }
 }
