@@ -44,10 +44,10 @@ class VideoController extends Controller
         ]);
  
         ConvertVideoForStreaming::dispatch($video);
-        return redirect('/')
-            ->with(
-                'files',
-                Storage::disk('public')->allFiles($current_timestamp)
-            );
+        return response()->json([
+            "success" => true,
+            "message" => "File successfully uploaded",
+            "files" => Storage::disk('public')->allFiles($current_timestamp)
+        ]);
     }
 }
