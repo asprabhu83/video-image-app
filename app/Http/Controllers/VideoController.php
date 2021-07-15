@@ -13,12 +13,8 @@ class VideoController extends Controller
 {
     public function index()
     {
-        $videos = Video::orderBy('created_at', 'DESC')->get();
-        return response()->json([
-            "success" => true,
-            "message" => "File successfully uploaded",
-            "files" => $videos
-        ]);
+        //$videos = Video::orderBy('created_at', 'DESC')->get();
+        return Video::all();
     }
  
     /**
