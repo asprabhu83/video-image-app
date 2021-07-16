@@ -35,12 +35,11 @@ class VideoController extends Controller
         $disk = Storage::disk('public');
         $disk->put($request->video->getClientOriginalName(), fopen($request->video, 'r+'));
         $current_timestamp = Carbon::now()->timestamp;
-     
         $video = Video::create([
             'disk'          => 'public',
-            'original_name' => $current_timestamp,
-            'path'          => $request->video->getClientOriginalName(),
-            'title'         => $request->title
+            'image_Location' => $current_timestamp,
+            'file_name'          => $request->video->getClientOriginalName(),
+            'project_name'         => $request->title
         ]);
  
         ConvertVideoForStreaming::dispatch($video);

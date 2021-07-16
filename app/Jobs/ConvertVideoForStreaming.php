@@ -38,11 +38,12 @@ class ConvertVideoForStreaming implements ShouldQueue
     public function handle()
     {
         $media = FFMpeg::fromDisk($this->video->disk)
-        ->open($this->video->path);
+        ->open($this->video->file_name);
         $durationInSeconds = $media->getDurationInSeconds();
+        $this->video->video_duration = $durationInSeconds;
         $diskName = Storage::build([
             'driver' => 'local',
-            'root' => public_path('uploads/' . $this->video->original_name),
+            'root' => public_path('uploads/' . $this->video->image_Location),
         ]);
         for ($secs = 0; $secs <= $durationInSeconds; $secs++) {
             $media = $media->getFrameFromSeconds($secs)
