@@ -18,7 +18,7 @@ class CreateVideosTable extends Migration
             $table->string('project_name');
             $table->string('file_name');
             $table->string('image_Location');
-            $table->string('video_duration');
+            $table->integer('video_duration')->default(0);
             $table->string('disk');
             $table->string('path');
             $table->string('stream_path')->nullable();
