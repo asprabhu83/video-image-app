@@ -13,8 +13,8 @@ class VideoController extends Controller
 {
     public function index()
     {
-        $videos = Video::orderBy('created_at', 'DESC')->get();
-        return view('videos')->with('videos', $videos);
+        //$videos = Video::orderBy('created_at', 'DESC')->get();
+        return Video::all();
     }
  
     /**

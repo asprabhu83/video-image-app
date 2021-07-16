@@ -13,5 +13,6 @@ use App\Http\Controllers\VideoController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-    Route::post('upload',  [VideoController::class, 'store']);
+Route::get('getProjects',  [VideoController::class, 'index']);
+Route::post('upload',  [VideoController::class, 'store']);
 
