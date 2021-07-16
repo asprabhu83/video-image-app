@@ -42,12 +42,8 @@ class ConvertVideoForStreaming implements ShouldQueue
         $durationInSeconds = $media->getDurationInSeconds();
         $this->video->video_duration = $durationInSeconds;
         $video = Video::updateOrCreate(
-            ['video_duration' => $durationInSeconds, 
-            'disk'          => $this->video->disk,
-            'image_Location' => $this->video->image_Location,
-            'file_name'          => $this->video->file_name,
-            'project_name'         => $this->video->project_name],
-            ['id' => $this->video->id]
+            ['id' => $this->video->id],
+            ['video_duration' => $durationInSeconds]
         );
         $diskName = Storage::build([
             'driver' => 'local',
