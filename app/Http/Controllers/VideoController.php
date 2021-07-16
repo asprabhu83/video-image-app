@@ -41,8 +41,8 @@ class VideoController extends Controller
             'file_name'          => $request->video->getClientOriginalName(),
             'project_name'         => $request->title
         ]);
- 
         ConvertVideoForStreaming::dispatch($video);
+        $video->save();
         return response()->json([
             "success" => true,
             "message" => "File successfully uploaded",
