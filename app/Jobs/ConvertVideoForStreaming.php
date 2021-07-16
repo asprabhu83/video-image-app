@@ -41,6 +41,10 @@ class ConvertVideoForStreaming implements ShouldQueue
         ->open($this->video->file_name);
         $durationInSeconds = $media->getDurationInSeconds();
         $this->video->video_duration = $durationInSeconds;
+        $video = Video::updateOrCreate(
+            ['video_duration' => $durationInSeconds],
+            ['id' => $this->video->id]
+        );
         $diskName = Storage::build([
             'driver' => 'local',
             'root' => public_path('uploads/' . $this->video->image_Location),
