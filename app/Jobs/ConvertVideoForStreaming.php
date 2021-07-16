@@ -41,7 +41,7 @@ class ConvertVideoForStreaming implements ShouldQueue
         ->open($this->video->file_name);
         $durationInSeconds = $media->getDurationInSeconds();
         $this->video->video_duration = $durationInSeconds;
-        $video = Video::updateOrCreate(
+        $video = Video::update(
             ['video_duration' => $durationInSeconds],
             ['id' => $this->video->id]
         );
