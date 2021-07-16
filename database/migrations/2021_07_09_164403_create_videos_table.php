@@ -20,7 +20,6 @@ class CreateVideosTable extends Migration
             $table->string('image_Location');
             $table->integer('video_duration')->default(0);
             $table->string('disk');
-            $table->string('path');
             $table->string('stream_path')->nullable();
             $table->boolean('processed')->default(false);
             $table->timestamps();
