@@ -50,7 +50,9 @@ class ConvertVideoForStreaming implements ShouldQueue
             'root' => public_path('uploads/' . $this->video->image_Location),
         ]);
         for ($secs = 0; $secs <= $durationInSeconds; $secs++) {
-            $media = $media->getFrameFromSeconds($secs)
+            $media = $media->export()
+                ->addFilter('fps=25')  
+                ->getFrameFromSeconds($secs)
                 ->export()
                 ->toDisk($diskName)
                 ->save("thumb_{$secs}.jpg");
