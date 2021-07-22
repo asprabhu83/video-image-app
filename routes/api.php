@@ -16,6 +16,7 @@ use App\Http\Controllers\AttributeDetailsController;
 |
 */
 Route::get('getProjects',  [VideoController::class, 'index']);
+Route::get('getClassAttributes',  [ClassDetailsController::class, 'index']);
 Route::post('upload',  [VideoController::class, 'store']);
 Route::post('createClass',  [ClassDetailsController::class, 'store']);
 Route::post('createAttribute',  [AttributeDetailsController::class, 'store']);

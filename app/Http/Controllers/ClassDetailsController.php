@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 class ClassDetailsController extends Controller
 {
     //
+    public function index()
+    {
+        $data = ClassDetails::join('class_details', 'DESC')
+                                    ->join('attribute_details', 'class_details.id', '=', 'attribute_details.class_id')
+                                    ->get();
+        return ClassDetails::all();
+    }
     public function store(ClassDetail $request)
     {
          $validated = $request->validated();
