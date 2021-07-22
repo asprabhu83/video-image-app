@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Requests\ClassDetail;
 use App\Models\ClassDetails;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -26,9 +25,9 @@ class ClassDetailsController extends Controller
                               ->get(['class_details.class_name', 'attribute_details.attribute_name', 'attribute_details.attribute_type', 'attribute_details.attribute_Values']);
         return compact('data');
     }
-    public function store(ClassDetail $request)
+    public function store(Request $request)
     {
-        ClassDetails::create([
+        $classdetails = ClassDetails::create([
             'project_id' => $request->project_id,
             'class_name' => $request->class_name
         ]);
