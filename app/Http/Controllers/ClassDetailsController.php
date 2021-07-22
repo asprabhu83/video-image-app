@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ClassDetailsController extends Controller
 {
     //
-    public function store(ClassDetails $request)
+    public function store(ClassDetail $request)
     {
         $validated = $request->validated();
         $saveClass = ClassDetails::create([
@@ -18,7 +18,8 @@ class ClassDetailsController extends Controller
         $saveClass->save();
         return response()->json([
             "success" => true,
-            "message" => "Class Created successfully uploaded"
+            "message" => "Class Created successfully uploaded",
+            'last_insert_id' => $saveClass->id
         ]);
     }
 }

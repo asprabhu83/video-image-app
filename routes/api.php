@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\ClassDetailsController;
+use App\Http\Controllers\AttributeDetailsController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -15,4 +17,6 @@ use App\Http\Controllers\VideoController;
 */
 Route::get('getProjects',  [VideoController::class, 'index']);
 Route::post('upload',  [VideoController::class, 'store']);
+Route::post('createClass',  [ClassDetailsController::class, 'store']);
+Route::post('createAttribute',  [AttributeDetailsController::class, 'store']);
 
