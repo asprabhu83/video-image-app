@@ -28,7 +28,7 @@ class ClassDetailsController extends Controller
     }
     public function store(ClassDetail $request)
     {
-        $classdetails = ClassDetails::create([
+        ClassDetails::create([
             'project_id' => $request->project_id,
             'class_name' => $request->class_name
         ]);
