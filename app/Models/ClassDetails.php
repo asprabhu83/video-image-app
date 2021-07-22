@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ClassDetails extends Model
 {
     protected $fillable = ['project_id'];
-    protected $guarded = [];
+    protected $casts = [
+        'class_name' => 'string'
+    ];
 }
