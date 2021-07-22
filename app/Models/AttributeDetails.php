@@ -9,8 +9,7 @@ class AttributeDetails extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'class_id',
-        'attribute_name',
-        'attribute_type'
+        'class_id'
     ];
+    protected $guarded = [];
 }
