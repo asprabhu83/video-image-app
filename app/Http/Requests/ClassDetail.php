@@ -24,7 +24,8 @@ class ClassDetail extends FormRequest
     public function rules()
     {
         return [
-            //
+            'projectid' => 'required',
+            'className' => 'required'
         ];
     }
 }

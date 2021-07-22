@@ -10,10 +10,10 @@ class ClassDetailsController extends Controller
     //
     public function store(ClassDetail $request)
     {
-        $validated = $request->validated();
+         $validated = $request->validated();
         $saveClass = ClassDetails::create([
-            'project_id' => $validated['projectid'],
-            'class_name' => $validated['className']
+            'project_id' => $request['projectid'],
+            'class_name' => $request['className']
         ]);
         $saveClass->save();
         return response()->json([
