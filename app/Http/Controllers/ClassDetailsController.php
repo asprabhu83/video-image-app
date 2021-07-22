@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Requests\ClassDetail;
 use App\Models\ClassDetails;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ClassDetailsController extends Controller
@@ -16,7 +17,7 @@ class ClassDetailsController extends Controller
     }
     public function store(Request $request)
     {
-        
+        echo $request->class_name;
         $saveClass = ClassDetails::create([
             'project_id' => $request->project_id,
             'class_name' => $request->class_name
