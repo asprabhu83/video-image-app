@@ -15,7 +15,7 @@ class CreateAttributeDetailsTable extends Migration
     {
         Schema::create('attribute_details', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('class_id');
+            $table->string('class_id');
             $table->string('attribute_name');
             $table->string('attribute_type');
             $table->string('attribute_Values');
