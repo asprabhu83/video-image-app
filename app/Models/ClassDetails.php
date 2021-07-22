@@ -8,8 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class ClassDetails extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'projectid',
-        'className'       
-    ];
+   
 }
