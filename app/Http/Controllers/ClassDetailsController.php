@@ -26,7 +26,7 @@ class ClassDetailsController extends Controller
                               ->get(['class_details.class_name', 'attribute_details.attribute_name', 'attribute_details.attribute_type', 'attribute_details.attribute_Values']);
         return compact('data');
     }
-    public function store(Request $request)
+    public function store(ClassDetail $request)
     {
         $classdetails = ClassDetails::create([
             'project_id' => $request->project_id,
@@ -36,7 +36,7 @@ class ClassDetailsController extends Controller
         return response()->json([
             "success" => true,
             "message" => "Class Created successfully uploaded",
-            'last_insert_id' => $saveClass->id
+            'last_insert_id' => $classdetails->id
         ]);
     }
 }
