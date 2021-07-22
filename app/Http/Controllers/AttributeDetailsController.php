@@ -15,7 +15,7 @@ class AttributeDetailsController extends Controller
             'class_id'       => $request->$class_id,
             'attribute_name' => $request->$attribute_name,
             'attribute_type' => $request->$attribute_type,
-            'attribute_Values' => implode(",", $request->$attribute_Values)
+            'attribute_Values' => $request->$attribute_Values? implode(",", $request->$attribute_Values):''
         ]);
         $saveClass->save();
         return response()->json([

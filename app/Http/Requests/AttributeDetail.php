@@ -26,8 +26,7 @@ class AttributeDetail extends FormRequest
         return [
             'class_id' => 'required',
             'attribute_name' => 'required',
-            'attribute_type' => 'required',
-            'attribute_Values' => 'required'
+            'attribute_type' => 'required'
         ];
     }
 }
