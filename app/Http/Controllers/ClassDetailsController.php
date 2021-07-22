@@ -12,7 +12,7 @@ class ClassDetailsController extends Controller
     {
         $data = ClassDetails::join('attribute_details', 'class_details.id', '=', 'attribute_details.class_id')
                               ->get(['class_details.class_name', 'attribute_details.attribute_name', 'attribute_details.attribute_type', 'attribute_details.attribute_Values']);
-        return view('class_details', compact('data'));
+        return compact('data');
     }
     public function store(ClassDetail $request)
     {
