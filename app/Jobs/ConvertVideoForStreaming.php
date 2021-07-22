@@ -51,7 +51,6 @@ class ConvertVideoForStreaming implements ShouldQueue
         ]);
         for ($secs = 0; $secs <= $durationInSeconds; $secs++) {
             $media = $media->export()
-                ->addFilter('fps=25')  
                 ->getFrameFromSeconds($secs)
                 ->export()
                 ->toDisk($diskName)
