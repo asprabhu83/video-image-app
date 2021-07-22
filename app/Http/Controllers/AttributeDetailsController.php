@@ -12,10 +12,10 @@ class AttributeDetailsController extends Controller
     {
         $validated = $request->validated();
         $saveClass = AttributeDetails::create([
-            'class_id'       => $request->$projectid,
-            'attribute_name' => $request->$attributeName,
-            'attribute_type' => $request->$attributeType,
-            'attribute_Values' => implode(",", $request->$attributeValues)
+            'class_id'       => $request->$class_id,
+            'attribute_name' => $request->$attribute_name,
+            'attribute_type' => $request->$attribute_type,
+            'attribute_Values' => implode(",", $request->$attribute_Values)
         ]);
         $saveClass->save();
         return response()->json([

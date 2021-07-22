@@ -24,7 +24,10 @@ class AttributeDetail extends FormRequest
     public function rules()
     {
         return [
-            //
+            'class_id' => 'required',
+            'attribute_name' => 'required',
+            'attribute_type' => 'required',
+            'attribute_Values' => 'required'
         ];
     }
 }
