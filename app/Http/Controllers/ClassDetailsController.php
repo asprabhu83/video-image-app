@@ -17,11 +17,9 @@ class ClassDetailsController extends Controller
     }
     public function store(Request $request)
     {
-        echo $request->class_name;
-        $saveClass = ClassDetails::create([
-            'project_id' => $request->project_id,
-            'class_name' => $request->class_name
-        ]);
+        $saveClass = new ClassDetails;
+        $saveClass->project_id = $request->project_id;
+        $saveClass->class_name = $request->class_name;
         $saveClass->save();
         return response()->json([
             "success" => true,
