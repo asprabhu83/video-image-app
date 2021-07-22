@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class ClassDetails extends Model
 {
-    protected $fillable = ['*'];
+    protected $table = 'class_details';
+    protected $fillable = [
+        'project_id',
+        'class_name'
+    ];
 }
