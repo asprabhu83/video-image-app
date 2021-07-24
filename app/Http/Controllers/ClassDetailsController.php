@@ -8,6 +8,18 @@ use Illuminate\Http\Request;
 class ClassDetailsController extends Controller
 {
     //
+    public $classdetails;
+ 
+    /**
+     * Create a new job instance.
+     *
+     * @param Video $video
+     */
+    public function __construct(ClassDetails $classdetails)
+    {
+        $this->classdetails = $classdetails;
+    }
+ 
     public function index()
     {
         $data = ClassDetails::join('attribute_details', 'class_details.id', '=', 'attribute_details.class_id')
@@ -16,9 +28,12 @@ class ClassDetailsController extends Controller
     }
     public function store(Request $request)
     {
-        $classdetails = new ClassDetails();
         $classdetails -> project_id = $request->project_id;
         $classdetails -> class_name = $request->class_name;
+        $classdetails=ClassDetails::create([
+            'project_id'          => $request->project_id,
+            'class_name' => $request->class_name
+        ]);
         $classdetails->save();
         return response()->json([
             "success" => true,
