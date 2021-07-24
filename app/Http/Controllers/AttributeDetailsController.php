@@ -13,7 +13,7 @@ class AttributeDetailsController extends Controller
         $validated = $request->validated();
         $saveClass = AttributeDetails::create([
             'class_id'       => $validated['class_id'],
-            'attribute_name' => $validated['$attribute_name'],
+            'attribute_name' => $validated['attribute_name'],
             'attribute_type' => $validated['attribute_type'],
             'attribute_Values' => $validated['attribute_Values']? implode(",", $validated['attribute_Values']):''
         ]);
