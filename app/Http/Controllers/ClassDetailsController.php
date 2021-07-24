@@ -16,7 +16,7 @@ class ClassDetailsController extends Controller
     }
     public function store(Request $request)
     {
-        $classdetails = new ClassDetails;
+        $classdetails = new ClassDetails();
         $classdetails -> project_id = $request->project_id;
         $classdetails -> class_name = $request->class_name;
         $classdetails->save();
