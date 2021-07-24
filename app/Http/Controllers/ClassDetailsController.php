@@ -22,13 +22,11 @@ class ClassDetailsController extends Controller
  
     public function index()
     {
-        $data = ClassDetails::join('attribute_details', 'class_details.id', '=', 'attribute_details.class_id')
-                              ->get(['class_details.class_name', 'attribute_details.attribute_name', 'attribute_details.attribute_type', 'attribute_details.attribute_Values']);
-        return compact('data');
+        return ClassDetails::all();
     }
     public function store(Request $request)
     {
-        $classdetails=ClassDetails::create([
+        $classdetails = ClassDetails::create([
             'project_id'  => $request->projectid,
             'class_name' => $request->className
         ]);
