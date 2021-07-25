@@ -19,7 +19,7 @@ class VideoController extends Controller
         $classDetails = ClassDetails::all();
         $imgArray = array();
         foreach($videos as $video) {
-            foreach(Storage::disk('publicUploads')->allFiles($current_timestamp) as $video->image_Location) {
+            foreach(Storage::disk('publicUploads')->allFiles($video->image_Location) as $file) {
                 $temp->classValue = $classDetails;
                 $temp->image_Location = $file;
                 $video->details=array();
