@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreVideoRequest;
 use App\Jobs\ConvertVideoForStreaming;
 use App\Models\Video;
+use App\Models\ClassDetails;
 use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -14,7 +15,18 @@ class VideoController extends Controller
     public function index()
     {
         //$videos = Video::orderBy('created_at', 'DESC')->get();
-        return Video::all();
+        $videos = Video::all();
+        $classDetails = ClassDetails::all();
+        $imgArray = array();
+        foreach($videos as $video) {
+            foreach(Storage::disk('publicUploads')->allFiles($current_timestamp) as $video->image_Location) {
+                $temp->classValue = $classDetails;
+                $temp->image_Location = $file;
+                $video->details=array();
+                $video->details.push($temp);
+            }
+        }
+        return $videos;
     }
  
     /**
@@ -43,10 +55,17 @@ class VideoController extends Controller
         ]);
         ConvertVideoForStreaming::dispatch($video);
         $video->save();
+        $classDetails = ClassDetails::all();
+        $imgArray = array();
+        foreach(Storage::disk('publicUploads')->allFiles($current_timestamp) as $file) {
+            $temp->classValue = $classDetails;
+            $temp->image_Location = $file;
+            $imgArray.push($temp);
+        }
         return response()->json([
             "success" => true,
             "message" => "File successfully uploaded",
-            "files" => Storage::disk('publicUploads')->allFiles($current_timestamp)
+            "files" => $imgArray
         ]);
     }
 }

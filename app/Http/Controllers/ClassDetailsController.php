@@ -20,9 +20,9 @@ class ClassDetailsController extends Controller
         $this->classdetails = $classdetails;
     }
  
-    public function index()
+    public function index(Request $request)
     {
-        return ClassDetails::all();
+        return ClassDetails::all()->where('project_id', $request->projectid);
     }
     public function store(Request $request)
     {
