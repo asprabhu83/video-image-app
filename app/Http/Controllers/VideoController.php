@@ -17,16 +17,17 @@ class VideoController extends Controller
         //$videos = Video::orderBy('created_at', 'DESC')->get();
         $videos = Video::all();
         $classDetails = ClassDetails::all();
-        $imgArray = array();
+        $Details=array();
         foreach($videos as $video) {
+            $details=array();
             foreach(Storage::disk('publicUploads')->allFiles($video->image_Location) as $file) {
-                $temp->classValue = $classDetails;
-                $temp->image_Location = $file;
-                $video->details=array();
-                $video->details.push($temp);
+                $obj=array('classDetails'=>$classDetails, 'image_Location'=>$file);
+                array_push($details, $obj);
             }
+            $temp=array("project_name"=>$video->project_name, "Details"=>$details);
+            array_push($Details, $temp);
         }
-        return $videos;
+        return $Details;
     }
  
     /**
@@ -50,22 +51,18 @@ class VideoController extends Controller
         $video = Video::create([
             'disk'          => 'public',
             'image_Location' => $current_timestamp,
-            'file_name'          => $request->video->getClientOriginalName(),
-            'project_name'         => $request->title
+            'file_name'      => $request->video->getClientOriginalName(),
+            'project_name'   => $request->title
         ]);
         ConvertVideoForStreaming::dispatch($video);
         $video->save();
-        $classDetails = ClassDetails::all();
-        $imgArray = array();
-        foreach(Storage::disk('publicUploads')->allFiles($current_timestamp) as $file) {
-            $temp->classValue = $classDetails;
-            $temp->image_Location = $file;
-            $imgArray.push($temp);
+        $Details=array();
+        foreach(Storage::disk('publicUploads')->allFiles($video->image_Location) as $file) {
+            $obj=array('classDetails'=>$classDetails, 'image_Location'=>$file);
+            array_push($details, $obj);
         }
-        return response()->json([
-            "success" => true,
-            "message" => "File successfully uploaded",
-            "files" => $imgArray
-        ]);
+        $temp=array("project_name"=>$video->project_name, "Details"=>$details);
+        array_push($Details, $temp);
+        return $Details;
     }
 }
