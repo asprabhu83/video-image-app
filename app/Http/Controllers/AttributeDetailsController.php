@@ -11,11 +11,16 @@ class AttributeDetailsController extends Controller
     public function store(AttributeDetail $request)
     {
         $validated = $request->validated();
+        if($request->attribute_Values && count($request->attribute_Values) > 0) {
+            $css = implode(', ', $request->attribute_Values);
+        } else {
+            $css = null;
+        }
         $saveClass = AttributeDetails::create([
             'class_id'       => $validated['class_id'],
             'attribute_name' => $validated['attribute_name'],
             'attribute_type' => $validated['attribute_type'],
-            'attribute_Values' => $validated['attribute_Values']? implode(",", $validated['attribute_Values']):''
+            'attribute_Values' => $css 
         ]);
         $saveClass->save();
         return response()->json([

@@ -28,12 +28,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 (function (e) {
   function t(t) {
-    for (var r, c, o = t[0], i = t[1], l = t[2], d = 0, b = []; d < o.length; d++) {
-      c = o[d], Object.prototype.hasOwnProperty.call(a, c) && a[c] && b.push(a[c][0]), a[c] = 0;
+    for (var r, c, i = t[0], o = t[1], l = t[2], d = 0, b = []; d < i.length; d++) {
+      c = i[d], Object.prototype.hasOwnProperty.call(a, c) && a[c] && b.push(a[c][0]), a[c] = 0;
     }
 
-    for (r in i) {
-      Object.prototype.hasOwnProperty.call(i, r) && (e[r] = i[r]);
+    for (r in o) {
+      Object.prototype.hasOwnProperty.call(o, r) && (e[r] = o[r]);
     }
 
     u && u(t);
@@ -47,9 +47,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   function n() {
     for (var e, t = 0; t < s.length; t++) {
-      for (var n = s[t], r = !0, o = 1; o < n.length; o++) {
-        var i = n[o];
-        0 !== a[i] && (r = !1);
+      for (var n = s[t], r = !0, i = 1; i < n.length; i++) {
+        var o = n[i];
+        0 !== a[o] && (r = !1);
       }
 
       r && (s.splice(t--, 1), e = c(c.s = n[0]));
@@ -108,15 +108,15 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   }, c.o = function (e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
   }, c.p = "/";
-  var o = window["webpackJsonp"] = window["webpackJsonp"] || [],
-      i = o.push.bind(o);
-  o.push = t, o = o.slice();
+  var i = window["webpackJsonp"] = window["webpackJsonp"] || [],
+      o = i.push.bind(i);
+  i.push = t, i = i.slice();
 
-  for (var l = 0; l < o.length; l++) {
-    t(o[l]);
+  for (var l = 0; l < i.length; l++) {
+    t(i[l]);
   }
 
-  var u = i;
+  var u = o;
   s.push([0, "chunk-vendors"]), n();
 })({
   0: function _(e, t, n) {
@@ -138,7 +138,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       "class": "w-full h-full relative z-10 scrollbar text-left text-none"
     };
 
-    function o(e, t, n, o, i, l) {
+    function i(e, t, n, i, o, l) {
       var u = Object(r["v"])("NavBar"),
           d = Object(r["v"])("Layers"),
           b = Object(r["v"])("router-view"),
@@ -150,7 +150,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     }
 
     n("d3b7"), n("ddb0");
-    var i = {
+    var o = {
       id: "right-panel",
       "class": "relative bg-gray-800 border-l border-gray-600 h-full w-64 flex flex-col overflow-hidden flex-shrink-0"
     },
@@ -174,7 +174,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     };
 
     function g(e, t, n, a, s, c) {
-      return Object(r["q"])(), Object(r["d"])("aside", i, [l, Object(r["g"])("section", u, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(c.designs, function (e, n) {
+      return Object(r["q"])(), Object(r["d"])("aside", o, [l, Object(r["g"])("section", u, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(c.designs, function (e, n) {
         return Object(r["q"])(), Object(r["d"])("div", {
           key: n,
           "class": "mt-2"
@@ -313,29 +313,29 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       }
     };
     N.render = V;
-    var q = N,
-        C = {
+    var C = N,
+        I = {
       "class": "flex justify-between bg-gray-900 border-b border-gray-600 text-white relative",
       id: "nav-bar"
     },
-        I = Object(r["g"])("div", {
+        q = Object(r["g"])("div", {
       "class": "flex-1 flex items-center"
     }, [Object(r["g"])("a", {
       href: "/",
       "class": "p-3 h-full flex items-center group border-r border-gray-600"
     }, " Image ")], -1);
 
-    function U(e, t) {
-      return Object(r["q"])(), Object(r["d"])("nav", C, [I]);
+    function _(e, t) {
+      return Object(r["q"])(), Object(r["d"])("nav", I, [q]);
     }
 
     var A = {};
-    A.render = U;
-    var L = A,
-        P = {
+    A.render = _;
+    var U = A,
+        R = {
       "class": "flex w-full h-full fixed block h-screen text-center bg-white opacity-75 z-50"
     },
-        R = Object(r["g"])("div", {
+        L = Object(r["g"])("div", {
       "class": "flex justify-around m-auto"
     }, [Object(r["g"])("span", {
       "class": "inline-flex rounded-md shadow-sm"
@@ -361,20 +361,20 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
     })]), Object(r["f"])(" Processing ")])])], -1);
 
-    function T(e, t) {
-      return Object(r["q"])(), Object(r["d"])("div", P, [R]);
+    function P(e, t) {
+      return Object(r["q"])(), Object(r["d"])("div", R, [L]);
     }
 
-    var S = {};
-    S.render = T;
-    var _ = S,
+    var T = {};
+    T.render = P;
+    var S = T,
         $ = {
       name: "App",
       components: {
         Design: f,
-        NavBar: L,
-        Layers: q,
-        Loading: _
+        NavBar: U,
+        Layers: C,
+        Loading: S
       },
       computed: {
         Layers: function Layers() {
@@ -385,7 +385,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
       }
     };
-    $.render = o;
+    $.render = i;
     var z = $,
         G = n("6c02"),
         M = {
@@ -422,7 +422,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     };
 
     function K(e, t, n, a, s, c) {
-      var o = Object(r["v"])("font-awesome-icon");
+      var i = Object(r["v"])("font-awesome-icon");
       return Object(r["q"])(), Object(r["d"])("section", M, [F, Object(r["g"])("form", D, [Object(r["g"])("div", B, [Object(r["g"])("div", H, [Object(r["G"])(Object(r["g"])("input", {
         type: "text",
         "class": "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
@@ -431,7 +431,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           return s.formData.title = e;
         }),
         placeholder: "Enter Project Name"
-      }, null, 512), [[r["B"], s.formData.title]])]), Object(r["g"])("div", Y, [Object(r["g"])("label", X, [Object(r["g"])(o, {
+      }, null, 512), [[r["B"], s.formData.title]])]), Object(r["g"])("div", Y, [Object(r["g"])("label", X, [Object(r["g"])(i, {
         icon: "cloud-upload-alt",
         size: "1x"
       }), J, Object(r["g"])("input", {
@@ -539,7 +539,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     };
 
     function ce(e, t, n, a, s, c) {
-      var o = Object(r["v"])("classComponent");
+      var i = Object(r["v"])("classComponent");
       return c.project ? (Object(r["q"])(), Object(r["d"])("div", te, [Object(r["g"])("ul", ne, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(s.tabs, function (e, t) {
         return Object(r["q"])(), Object(r["d"])("li", {
           key: t,
@@ -561,13 +561,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
             return c.editImage(e, c.project);
           }
         }, null, 8, ["src", "onClick"])]);
-      }), 128))])], 512), [[r["C"], 0 === s.activeTab]]), Object(r["G"])(Object(r["g"])("div", null, [Object(r["g"])(o)], 512), [[r["C"], 1 === s.activeTab]])])])) : Object(r["e"])("", !0);
+      }), 128))])], 512), [[r["C"], 0 === s.activeTab]]), Object(r["G"])(Object(r["g"])("div", null, [Object(r["g"])(i)], 512), [[r["C"], 1 === s.activeTab]])])])) : Object(r["e"])("", !0);
     }
 
-    var oe = {
+    var ie = {
       "class": "w-full bg-grey-500"
     },
-        ie = Object(r["g"])("span", {
+        oe = Object(r["g"])("span", {
       "class": "px-2"
     }, "New Class", -1),
         le = {
@@ -614,30 +614,33 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       "class": "flex items-center leading-normal bg-white rounded rounded-l-none border-0 px-3 whitespace-no-wrap text-gray-600"
     },
         ye = {
-      "class": "w-1/4 px-3"
+      "class": "flex w-1/4 px-3 items-center"
     },
         we = {
       "class": "align-middle py-3 "
     },
         ke = {
+      "class": "align-middle py-3 "
+    },
+        Ee = {
       key: 0,
       "class": "flex flex-row py-2 px-8"
     },
-        Ee = {
+        Ve = {
       "class": "text-xs font-normal py-2 px-2"
     };
 
-    function Ve(e, t, n, a, s, c) {
-      var o = Object(r["v"])("font-awesome-icon");
-      return Object(r["q"])(), Object(r["d"])("div", oe, [Object(r["g"])("button", {
+    function Ne(e, t, n, a, s, c) {
+      var i = Object(r["v"])("font-awesome-icon");
+      return Object(r["q"])(), Object(r["d"])("div", ie, [Object(r["g"])("button", {
         "class": "bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center",
         onClick: t[1] || (t[1] = function () {
           return c.addClass && c.addClass.apply(c, arguments);
         })
-      }, [Object(r["g"])(o, {
+      }, [Object(r["g"])(i, {
         icon: "plus",
         size: "1x"
-      }), ie]), s.classes && s.classes.length > 0 ? (Object(r["q"])(), Object(r["d"])("div", le, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(s.classes, function (t, n) {
+      }), oe]), s.classes && s.classes.length > 0 ? (Object(r["q"])(), Object(r["d"])("div", le, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(s.classes, function (t, n) {
         return Object(r["q"])(), Object(r["d"])("div", {
           "class": "w-full mx-auto bg-white rounded shadow",
           key: n
@@ -650,75 +653,84 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
             return t.className = e;
           },
           placeholder: t.placeHolder
-        }, null, 8, ["type", "name", "id", "onUpdate:modelValue", "placeholder"]), [[r["z"], t.className]]), Object(r["g"])(o, {
+        }, null, 8, ["type", "name", "id", "onUpdate:modelValue", "placeholder"]), [[r["z"], t.className]]), Object(r["g"])("button", {
+          onClick: Object(r["H"])(function (e) {
+            return c.saveClass(t);
+          }, ["prevent"])
+        }, [Object(r["g"])(i, {
           icon: "save",
           size: "1x",
-          onClick: function onClick(e) {
-            return c.saveClass(t);
-          },
           "class": "mx-3"
-        }, null, 8, ["onClick"])]), Object(r["g"])("a", {
+        })], 8, ["onClick"])]), Object(r["g"])("a", {
           "class": "bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center",
           onClick: function onClick(e) {
             return c.addAttributes(t);
           }
-        }, [Object(r["g"])(o, {
+        }, [Object(r["g"])(i, {
           icon: "plus",
           size: "1x"
         }), ge], 8, ["onClick"]), t.attributes && t.attributes.length > 0 ? (Object(r["q"])(!0), Object(r["d"])(r["a"], {
           key: 0
-        }, Object(r["u"])(t.attributes, function (t, a) {
+        }, Object(r["u"])(t.attributes, function (a, s) {
           return Object(r["q"])(), Object(r["d"])("div", {
             "class": "w-full mx-auto bg-white mb-4 mt-4",
-            key: a + n
+            key: s + n
           }, [Object(r["g"])("div", me, [Object(r["g"])("div", fe, [Object(r["G"])(Object(r["g"])("input", {
             "class": " border rounded  py-2 px-3 text-grey-darker border-0 relative self-center outline-none",
-            type: t.nametype,
-            name: t.idName,
-            id: t.idName,
+            type: a.nametype,
+            name: a.idName,
+            id: a.idName,
             "onUpdate:modelValue": function onUpdateModelValue(e) {
-              return t.attributeName = e;
+              return a.attributeName = e;
             },
-            placeholder: t.placeHolder
-          }, null, 8, ["type", "name", "id", "onUpdate:modelValue", "placeholder"]), [[r["z"], t.attributeName]])]), Object(r["g"])("div", je, [Object(r["G"])(Object(r["g"])("select", {
+            placeholder: a.placeHolder
+          }, null, 8, ["type", "name", "id", "onUpdate:modelValue", "placeholder"]), [[r["z"], a.attributeName]])]), Object(r["g"])("div", je, [Object(r["G"])(Object(r["g"])("select", {
             "onUpdate:modelValue": function onUpdateModelValue(e) {
-              return t.attributeType = e;
+              return a.attributeType = e;
             },
             "class": "border rounded w-3/4 py-2 px-3 text-grey-darker border-0 relative self-center outline-none"
-          }, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(t.typeValues, function (e, t) {
+          }, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(a.typeValues, function (e, t) {
             return Object(r["q"])(), Object(r["d"])("option", {
               key: t
             }, Object(r["x"])(e), 1);
-          }), 128))], 8, ["onUpdate:modelValue"]), [[r["A"], t.attributeType]])]), "select" === t.attributeType ? (Object(r["q"])(), Object(r["d"])("div", Oe, [Object(r["g"])("div", he, [Object(r["G"])(Object(r["g"])("input", {
+          }), 128))], 8, ["onUpdate:modelValue"]), [[r["A"], a.attributeType]])]), "select" === a.attributeType ? (Object(r["q"])(), Object(r["d"])("div", Oe, [Object(r["g"])("div", he, [Object(r["G"])(Object(r["g"])("input", {
             "class": "flex-shrink flex-grow flex-auto leading-normal w-px flex-1 border-0 relative self-center outline-none",
             type: "text",
             name: "selectValue",
             id: "selectValue",
             "onUpdate:modelValue": function onUpdateModelValue(e) {
-              return t.selectValue = e;
+              return a.selectValue = e;
             },
             placeholder: "Enter Select Value"
-          }, null, 8, ["onUpdate:modelValue"]), [[r["B"], t.selectValue]]), Object(r["g"])("div", ve, [Object(r["g"])("span", xe, [Object(r["g"])(o, {
+          }, null, 8, ["onUpdate:modelValue"]), [[r["B"], a.selectValue]]), Object(r["g"])("div", ve, [Object(r["g"])("span", xe, [Object(r["g"])(i, {
             icon: "plus",
             size: "1x",
             onClick: function onClick(e) {
-              return c.addAttributesValues(t);
+              return c.addAttributesValues(a);
             }
-          }, null, 8, ["onClick"])])])])])) : Object(r["e"])("", !0), Object(r["g"])("div", ye, [Object(r["g"])("div", we, [Object(r["g"])(o, {
+          }, null, 8, ["onClick"])])])])])) : Object(r["e"])("", !0), Object(r["g"])("div", ye, [Object(r["g"])("div", we, [Object(r["g"])("a", {
+            onClick: Object(r["H"])(function (e) {
+              return c.saveAttributes(t, a);
+            }, ["prevent"])
+          }, [Object(r["g"])(i, {
+            icon: "save",
+            size: "1x"
+          })], 8, ["onClick"])]), Object(r["g"])("div", ke, [Object(r["g"])("button", {
+            onClick: function onClick(t) {
+              return e.deleteAttributesValues(a);
+            }
+          }, [Object(r["g"])(i, {
             icon: "trash",
-            size: "1x",
-            onClick: function onClick(n) {
-              return e.deleteAttributesValues(t);
-            }
-          }, null, 8, ["onClick"])])])]), "select" === t.attributeType && t.attributeValues.length > 0 ? (Object(r["q"])(), Object(r["d"])("div", ke, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(t.attributeValues, function (e, n) {
+            size: "1x"
+          })], 8, ["onClick"])])])]), "select" === a.attributeType && a.attributeValues.length > 0 ? (Object(r["q"])(), Object(r["d"])("div", Ee, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(a.attributeValues, function (e, t) {
             return Object(r["q"])(), Object(r["d"])("div", {
               "class": "flex w-auto  justify-center items-center m-1 px-5 py-1 rounded-full bg-green-700 text-base text-white font-medium",
-              key: n
-            }, [Object(r["g"])("div", Ee, Object(r["x"])(e), 1), Object(r["g"])(o, {
+              key: t
+            }, [Object(r["g"])("div", Ve, Object(r["x"])(e), 1), Object(r["g"])(i, {
               icon: "times",
               size: "1x",
               onClick: function onClick(e) {
-                return c.addAttributesValues(t);
+                return c.addAttributesValues(a);
               }
             }, null, 8, ["onClick"])]);
           }), 128))])) : Object(r["e"])("", !0)]);
@@ -726,7 +738,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       }), 128))])) : Object(r["e"])("", !0)]);
     }
 
-    var Ne = {
+    n("25f0");
+    var Ce = {
       data: function data() {
         return {
           "class": {
@@ -747,7 +760,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
             selectValue: "",
             attributeValues: []
           },
-          classes: []
+          classes: [],
+          last_ID: ""
         };
       },
       methods: {
@@ -776,11 +790,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
               while (1) {
                 switch (n.prev = n.next) {
                   case 0:
-                    return n.next = 2, t.axios.post(t.appURI + "/api/createClass", {
+                    return n.next = 2, t.axios.post(t.appURI + "api/createClass", {
                       projectid: t.$store.state.selectedProject.id,
                       className: e.className
-                    }).then(function (e) {
-                      console.log(e);
+                    }).then(function (n) {
+                      e.classId = n.data.last_insert_id, t.last_ID = n.data.last_insert_id;
                     });
 
                   case 2:
@@ -795,6 +809,30 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           var t = Object.create(this.attribute);
           e.attributes.length > 0 ? t.idName = "attributeName" + e.attributes.length : t.idName = "attributeName", e.attributes.push(t);
         },
+        saveAttributes: function saveAttributes(e, t) {
+          var n = this;
+          return Object(Q["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function r() {
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function (r) {
+              while (1) {
+                switch (r.prev = r.next) {
+                  case 0:
+                    return r.next = 2, n.axios.post(n.appURI + "api/createAttribute", {
+                      class_id: e.classId.toString(),
+                      attribute_name: t.attributeName,
+                      attribute_type: t.attributeType,
+                      attribute_Values: t.attributeValues
+                    }).then(function (e) {
+                      t.attributeId = e.last_insert_id;
+                    });
+
+                  case 2:
+                  case "end":
+                    return r.stop();
+                }
+              }
+            }, r);
+          }))();
+        },
         addAttributesValues: function addAttributesValues(e) {
           "" !== e.selectValue && e.attributeValues.push(e.selectValue), e.selectValue = "";
         }
@@ -805,12 +843,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
       }
     };
-    Ne.render = Ve;
-    var qe = Ne,
-        Ce = {
+    Ce.render = Ne;
+    var Ie = Ce,
+        qe = {
       name: "Grid",
       components: {
-        classComponent: qe
+        classComponent: Ie
       },
       data: function data() {
         return {
@@ -833,21 +871,21 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
       }
     };
-    Ce.render = ce;
-    var Ie = Ce,
-        Ue = {
+    qe.render = ce;
+    var _e = qe,
+        Ae = {
       "class": "w-full overflow-hidden"
     };
 
-    function Ae(e, t, n, a, s, c) {
-      var o = Object(r["v"])("bb-component"),
-          i = Object(r["v"])("carousal");
-      return Object(r["q"])(), Object(r["d"])("div", Ue, [Object(r["g"])(o, {
+    function Ue(e, t, n, a, s, c) {
+      var i = Object(r["v"])("bb-component"),
+          o = Object(r["v"])("carousal");
+      return Object(r["q"])(), Object(r["d"])("div", Ae, [Object(r["g"])(i, {
         src: c.imgSrc
-      }, null, 8, ["src"]), Object(r["g"])(i)]);
+      }, null, 8, ["src"]), Object(r["g"])(o)]);
     }
 
-    function Le(e, t, n, a, s, c) {
+    function Re(e, t, n, a, s, c) {
       return s.imgsize ? (Object(r["q"])(), Object(r["d"])("svg", {
         key: 0,
         viewBox: "0 0 " + s.imgsize.width + " " + s.imgsize.height,
@@ -874,7 +912,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     }
 
     n("99af");
-    var Pe = {
+    var Le = {
       props: ["src", "bbcolor", "bbstroke"],
       data: function data() {
         return {
@@ -957,22 +995,22 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
             this.svgElement.addEventListener("mousemove", a), this.svgElement.addEventListener("mouseup", s), this.svgElement.addEventListener("mouseleave", s);
           } else {
             var c = document.createElementNS("http://www.w3.org/2000/svg", "rect"),
-                o = this.svgPoint(this.svgElement, e.clientX, e.clientY),
-                i = function i(e) {
+                i = this.svgPoint(this.svgElement, e.clientX, e.clientY),
+                o = function o(e) {
               var n = t.svgPoint(t.svgElement, e.clientX, e.clientY),
-                  r = Math.abs(n.x - o.x),
-                  a = Math.abs(n.y - o.y);
-              n.x > o.x && (n.x = o.x), n.y > o.y && (n.y = o.y), c.setAttributeNS(null, "x", n.x), c.setAttributeNS(null, "y", n.y), c.setAttributeNS(null, "width", r), c.setAttributeNS(null, "height", a), c.setAttributeNS(null, "stroke", "#EF5350"), c.setAttributeNS(null, "fill", "#EF5350"), c.setAttributeNS(null, "fill-opacity", "0.4"), c.setAttributeNS(null, "stroke-width", "2"), c.setAttributeNS(null, "vector-effect", "non-scaling-stroke"), c.setAttributeNS(null, "shape-rendering", "crispEdges"), c.setAttributeNS(null, "class", "draggable"), t.svgElement.appendChild(c), o.x = n.x, o.y = n.y;
+                  r = Math.abs(n.x - i.x),
+                  a = Math.abs(n.y - i.y);
+              n.x > i.x && (n.x = i.x), n.y > i.y && (n.y = i.y), c.setAttributeNS(null, "x", n.x), c.setAttributeNS(null, "y", n.y), c.setAttributeNS(null, "width", r), c.setAttributeNS(null, "height", a), c.setAttributeNS(null, "stroke", "#EF5350"), c.setAttributeNS(null, "fill", "#EF5350"), c.setAttributeNS(null, "fill-opacity", "0.4"), c.setAttributeNS(null, "stroke-width", "2"), c.setAttributeNS(null, "vector-effect", "non-scaling-stroke"), c.setAttributeNS(null, "shape-rendering", "crispEdges"), c.setAttributeNS(null, "class", "draggable"), t.svgElement.appendChild(c), i.x = n.x, i.y = n.y;
             },
                 l = function e(n) {
               var r = t.svgPoint(t.svgElement, n.clientX, n.clientY),
-                  a = Math.abs(r.x - o.x),
-                  s = Math.abs(r.y - o.y),
+                  a = Math.abs(r.x - i.x),
+                  s = Math.abs(r.y - i.y),
                   c = Object.create(t.annotation);
-              c.x = o.x, c.y = o.y, c.w = a, c.h = s, t.boundingBoxes.push(c), console.log(t.boundingBoxes), c.printCoordinates(), t.svgElement.removeEventListener("mousemove", i), t.svgElement.removeEventListener("mouseup", e);
+              c.x = i.x, c.y = i.y, c.w = a, c.h = s, t.boundingBoxes.push(c), console.log(t.boundingBoxes), c.printCoordinates(), t.svgElement.removeEventListener("mousemove", o), t.svgElement.removeEventListener("mouseup", e);
             };
 
-            this.svgElement.addEventListener("mousemove", i), this.svgElement.addEventListener("mouseup", l);
+            this.svgElement.addEventListener("mousemove", o), this.svgElement.addEventListener("mouseup", l);
           }
         },
         getMousePosition: function getMousePosition(e) {
@@ -1002,12 +1040,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
       }
     };
-    Pe.render = Le;
-    var Re = Pe;
+    Le.render = Re;
+    var Pe = Le;
 
     function Te(e, t, n, a, s, c) {
-      var o = this,
-          i = Object(r["v"])("slide"),
+      var i = this,
+          o = Object(r["v"])("slide"),
           l = Object(r["v"])("navigation"),
           u = Object(r["v"])("carousel", !0);
       return c.project ? (Object(r["q"])(), Object(r["d"])(u, {
@@ -1020,12 +1058,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }),
         "default": Object(r["F"])(function () {
           return [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(c.project.video_duration, function (e) {
-            return Object(r["q"])(), Object(r["d"])(i, {
+            return Object(r["q"])(), Object(r["d"])(o, {
               key: e
             }, {
               "default": Object(r["F"])(function () {
                 return [Object(r["g"])("img", {
-                  src: c.appURI + "/uploads/" + o.project.image_Location + "/thumb_" + e + ".jpg",
+                  src: c.appURI + "/uploads/" + i.project.image_Location + "/thumb_" + e + ".jpg",
                   "class": "w-40"
                 }, null, 8, ["src"])];
               }),
@@ -1039,7 +1077,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
     n("4001");
     var Se = n("0b81"),
-        _e = {
+        $e = {
       name: "App",
       components: {
         Carousel: Se["a"],
@@ -1058,12 +1096,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
       }
     };
-    _e.render = Te;
-    var $e = _e,
-        ze = {
+    $e.render = Te;
+    var ze = $e,
+        Ge = {
       components: {
-        carousal: $e,
-        bbComponent: Re
+        carousal: ze,
+        bbComponent: Pe
       },
       computed: {
         project: function project() {
@@ -1080,28 +1118,28 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
       }
     };
-    ze.render = Ae;
-    var Ge = ze,
-        Me = [{
+    Ge.render = Ue;
+    var Me = Ge,
+        Fe = [{
       path: "/",
       name: "Home",
       component: ee
     }, {
       path: "/project",
       name: "Grid",
-      component: Ie
+      component: _e
     }, {
       path: "/editor",
       name: "Editor",
-      component: Ge
+      component: Me
     }],
-        Fe = Object(G["a"])({
+        De = Object(G["a"])({
       history: Object(G["b"])("/"),
-      routes: Me
+      routes: Fe
     }),
-        De = Fe,
-        Be = n("5502"),
-        He = Object(Be["a"])({
+        Be = De,
+        He = n("5502"),
+        Ye = Object(He["a"])({
       state: {
         galleries: [],
         loading: !1,
@@ -1118,16 +1156,16 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       actions: {},
       modules: {}
     }),
-        Ye = n("ecee"),
-        Xe = n("c074"),
-        Je = n("ad3d"),
-        We = n("bc3a"),
-        Ke = n.n(We),
-        Qe = n("2106"),
-        Ze = n.n(Qe);
-    Ye["c"].add(Xe["f"], Xe["a"], Xe["b"], Xe["e"], Xe["d"], Xe["c"]);
-    var et = Object(r["c"])(z);
-    et.component("font-awesome-icon", Je["a"]), et.config.productionTip = !1, et.use(He).use(De).use(Ze.a, Ke.a).mount("#app"), console.log(Object({
+        Xe = n("ecee"),
+        Je = n("c074"),
+        We = n("ad3d"),
+        Ke = n("bc3a"),
+        Qe = n.n(Ke),
+        Ze = n("2106"),
+        et = n.n(Ze);
+    Xe["c"].add(Je["f"], Je["a"], Je["b"], Je["e"], Je["d"], Je["c"]);
+    var tt = Object(r["c"])(z);
+    tt.component("font-awesome-icon", We["a"]), tt.config.productionTip = !1, tt.use(Ye).use(Be).use(et.a, Qe.a).mount("#app"), console.log(Object({
       NODE_ENV: "production",
       VUE_APP_API_URI_PREFIX: "",
       VUE_APP_THEME: "theme2",
