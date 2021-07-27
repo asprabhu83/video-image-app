@@ -57,13 +57,9 @@ class VideoController extends Controller
         ]);
         ConvertVideoForStreaming::dispatch($video);
         $video->save();
-        $Details=array();
-        foreach(Storage::disk('publicUploads')->allFiles($video->image_Location) as $file) {
-            $obj=array('classDetails'=>$classDetails, 'image_Location'=>$file, 'boundingBoxes'=>array());
-            array_push($details, $obj);
-        }
-        $temp=array("project_name"=>$video->project_name, "Details"=>$details);
-        array_push($Details, $temp);
-        return $Details;
+        return response()->json([
+            "success" => true,
+            "message" => "File successfully uploaded"
+        ]);
     }
 }
