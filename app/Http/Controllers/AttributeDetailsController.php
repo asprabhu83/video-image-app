@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class AttributeDetailsController extends Controller
 {
+
+    public function index(Request $request)
+    {
+        return AttributeDetails::where('class_id', $request->class_id)->get();
+    }
+ 
     //
     public function store(AttributeDetail $request)
     {

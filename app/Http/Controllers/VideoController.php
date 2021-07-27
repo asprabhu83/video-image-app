@@ -21,10 +21,10 @@ class VideoController extends Controller
         foreach($videos as $video) {
             $details=array();
             foreach(Storage::disk('publicUploads')->allFiles($video->image_Location) as $file) {
-                $obj=array('classDetails'=>$classDetails, 'image_Location'=>$file);
+                $obj=array('boundingBoxes'=>array(), 'classDetails'=>$classDetails, 'image_Location'=>$file);
                 array_push($details, $obj);
             }
-            $temp=array("project_name"=>$video->project_name, "Details"=>$details);
+            $temp=array("project_name"=>$video->project_name, "Details"=>$details );
             array_push($Details, $temp);
         }
         return $Details;
@@ -58,7 +58,7 @@ class VideoController extends Controller
         $video->save();
         $Details=array();
         foreach(Storage::disk('publicUploads')->allFiles($video->image_Location) as $file) {
-            $obj=array('classDetails'=>$classDetails, 'image_Location'=>$file);
+            $obj=array('classDetails'=>$classDetails, 'image_Location'=>$file, 'boundingBoxes'=>array());
             array_push($details, $obj);
         }
         $temp=array("project_name"=>$video->project_name, "Details"=>$details);
