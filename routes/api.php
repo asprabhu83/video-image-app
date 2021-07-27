@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ClassDetailsController;
 use App\Http\Controllers\AttributeDetailsController;
 /*
@@ -15,10 +16,12 @@ use App\Http\Controllers\AttributeDetailsController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('getProjects',  [VideoController::class, 'index']);
+Route::get('getProjects',  [ProjectsController::class, 'index']);
+Route::get('getVideos',  [VideoController::class, 'index']);
 Route::get('getClasses',  [ClassDetailsController::class, 'index']);
 Route::get('getAttributes',  [AttributeDetailsController::class, 'index']);
 Route::post('upload',  [VideoController::class, 'store']);
+Route::post('createProject',  [ProjectsController::class, 'store']);
 Route::post('createClass',  [ClassDetailsController::class, 'store']);
 Route::post('createAttribute',  [AttributeDetailsController::class, 'store']);
 

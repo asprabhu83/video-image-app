@@ -12,11 +12,11 @@ use Illuminate\Http\Request;
 
 class VideoController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         //$videos = Video::orderBy('created_at', 'DESC')->get();
-        $videos = Video::all();
-        $classDetails = ClassDetails::all();
+        $videos = Video::where('project_id', $request->project_id)->get();
+        $classDetails = ClassDetails::where('project_id', $request->project_id)->get();
         $Details=array();
         foreach($videos as $video) {
             $details=array();
@@ -24,7 +24,7 @@ class VideoController extends Controller
                 $obj=array('boundingBoxes'=>array(), 'classDetails'=>$classDetails, 'image_Location'=>$file);
                 array_push($details, $obj);
             }
-            $temp=array("project_name"=>$video->project_name, "Details"=>$details );
+            $temp=array("id"=>$video->id, "project_name"=>$video->project_name, "image_Location"=>$video->image_Location, "Details"=>$details );
             array_push($Details, $temp);
         }
         return $Details;
@@ -49,6 +49,7 @@ class VideoController extends Controller
         $disk->put($request->video->getClientOriginalName(), fopen($request->video, 'r+'));
         $current_timestamp = Carbon::now()->timestamp;
         $video = Video::create([
+            'project_id'   => $request->projectId,
             'disk'          => 'public',
             'image_Location' => $current_timestamp,
             'file_name'      => $request->video->getClientOriginalName(),
