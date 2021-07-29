@@ -25,3 +25,35 @@ Route::post('createProject',  [ProjectsController::class, 'store']);
 Route::post('createClass',  [ClassDetailsController::class, 'store']);
 Route::post('createAttribute',  [AttributeDetailsController::class, 'store']);
 
+
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
+
+
+Route::group(['prefix' => 'users'], function()  
+{  
+    Route::post('/register', 'UserController@register');
+    Route::post('/login', 'UserController@login');
+    Route::get('/index','UserController@index');
+    Route::get('/show/{id}', 'UserController@show');
+    Route::put('/update/{id}', 'UserController@update');
+    Route::delete('/delete/{id}', 'UserController@delete');
+
+    Route::middleware('auth:api')->get('/currentUser','UserController@currentUser');
+
+    Route::middleware('auth:api')->post('/logout','UserController@logout');
+
+}); 
+
+//permission table
+
+Route::group(['prefix' => 'permission'], function()  
+{  
+    Route::post('/store', 'PermissionController@store');
+    Route::get('/index', 'PermissionController@index');
+    Route::get('/show/{id}', 'PermissionController@show');
+    Route::put('/update/{id}', 'PermissionController@update');
+    Route::delete('/delete/{id}', 'PermissionController@delete');
+}); 
+
