@@ -12,6 +12,7 @@
         "laravel/framework": "^8.40",
         "laravel/passport": "^10.1",
         "laravel/tinker": "^2.5",
+        "lcobucci/jwt": "^3.3.3",
         "pbmedia/laravel-ffmpeg": "^7.5"
     },
     "require-dev": {
