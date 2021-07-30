@@ -28,12 +28,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 (function (e) {
   function t(t) {
-    for (var r, c, i = t[0], o = t[1], l = t[2], d = 0, b = []; d < i.length; d++) {
-      c = i[d], Object.prototype.hasOwnProperty.call(a, c) && a[c] && b.push(a[c][0]), a[c] = 0;
+    for (var r, o, c = t[0], i = t[1], l = t[2], d = 0, b = []; d < c.length; d++) {
+      o = c[d], Object.prototype.hasOwnProperty.call(s, o) && s[o] && b.push(s[o][0]), s[o] = 0;
     }
 
-    for (r in o) {
-      Object.prototype.hasOwnProperty.call(o, r) && (e[r] = o[r]);
+    for (r in i) {
+      Object.prototype.hasOwnProperty.call(i, r) && (e[r] = i[r]);
     }
 
     u && u(t);
@@ -42,82 +42,82 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       b.shift()();
     }
 
-    return s.push.apply(s, l || []), n();
+    return a.push.apply(a, l || []), n();
   }
 
   function n() {
-    for (var e, t = 0; t < s.length; t++) {
-      for (var n = s[t], r = !0, i = 1; i < n.length; i++) {
-        var o = n[i];
-        0 !== a[o] && (r = !1);
+    for (var e, t = 0; t < a.length; t++) {
+      for (var n = a[t], r = !0, c = 1; c < n.length; c++) {
+        var i = n[c];
+        0 !== s[i] && (r = !1);
       }
 
-      r && (s.splice(t--, 1), e = c(c.s = n[0]));
+      r && (a.splice(t--, 1), e = o(o.s = n[0]));
     }
 
     return e;
   }
 
   var r = {},
-      a = {
+      s = {
     app: 0
   },
-      s = [];
+      a = [];
 
-  function c(t) {
+  function o(t) {
     if (r[t]) return r[t].exports;
     var n = r[t] = {
       i: t,
       l: !1,
       exports: {}
     };
-    return e[t].call(n.exports, n, n.exports, c), n.l = !0, n.exports;
+    return e[t].call(n.exports, n, n.exports, o), n.l = !0, n.exports;
   }
 
-  c.m = e, c.c = r, c.d = function (e, t, n) {
-    c.o(e, t) || Object.defineProperty(e, t, {
+  o.m = e, o.c = r, o.d = function (e, t, n) {
+    o.o(e, t) || Object.defineProperty(e, t, {
       enumerable: !0,
       get: n
     });
-  }, c.r = function (e) {
+  }, o.r = function (e) {
     "undefined" !== typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
       value: "Module"
     }), Object.defineProperty(e, "__esModule", {
       value: !0
     });
-  }, c.t = function (e, t) {
-    if (1 & t && (e = c(e)), 8 & t) return e;
+  }, o.t = function (e, t) {
+    if (1 & t && (e = o(e)), 8 & t) return e;
     if (4 & t && "object" === _typeof(e) && e && e.__esModule) return e;
     var n = Object.create(null);
-    if (c.r(n), Object.defineProperty(n, "default", {
+    if (o.r(n), Object.defineProperty(n, "default", {
       enumerable: !0,
       value: e
     }), 2 & t && "string" != typeof e) for (var r in e) {
-      c.d(n, r, function (t) {
+      o.d(n, r, function (t) {
         return e[t];
       }.bind(null, r));
     }
     return n;
-  }, c.n = function (e) {
+  }, o.n = function (e) {
     var t = e && e.__esModule ? function () {
       return e["default"];
     } : function () {
       return e;
     };
-    return c.d(t, "a", t), t;
-  }, c.o = function (e, t) {
+    return o.d(t, "a", t), t;
+  }, o.o = function (e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
-  }, c.p = "/";
-  var i = window["webpackJsonp"] = window["webpackJsonp"] || [],
-      o = i.push.bind(i);
-  i.push = t, i = i.slice();
+  }, o.p = "/";
+  var c = window["webpackJsonp"] = window["webpackJsonp"] || [],
+      i = c.push.bind(c);
+  c.push = t, c = c.slice();
 
-  for (var l = 0; l < i.length; l++) {
-    t(i[l]);
+  for (var l = 0; l < c.length; l++) {
+    t(c[l]);
   }
 
-  var u = o;
-  s.push([0, "chunk-vendors"]), n();
+  var u = i;
+  a.push([0, "chunk-vendors"]), n();
 })({
   0: function _(e, t, n) {
     e.exports = n("56d7");
@@ -127,321 +127,84 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
     n.r(t);
     n("e260"), n("e6cf"), n("cca6"), n("a79d");
-    var r = n("7a23"),
-        a = (n("a2f0"), {
-      "class": "h-screen w-screen bg-white flex flex-col"
-    }),
-        s = {
-      "class": "relative flex flex-1 flex-row"
-    },
-        c = {
-      "class": "w-full h-full relative z-10 scrollbar text-left text-none"
-    };
+    var r = n("7a23");
+    n("a2f0");
 
-    function i(e, t, n, i, o, l) {
-      var u = Object(r["v"])("NavBar"),
-          d = Object(r["v"])("Layers"),
-          b = Object(r["v"])("router-view"),
-          p = Object(r["v"])("Design"),
-          g = Object(r["v"])("Loading");
-      return Object(r["q"])(), Object(r["d"])("main", a, [Object(r["g"])(u), Object(r["g"])("section", s, [Object(r["g"])(d), Object(r["g"])("section", c, [Object(r["g"])(b)]), Object(r["g"])(p)]), l.loading ? (Object(r["q"])(), Object(r["d"])(g, {
-        key: 0
-      })) : Object(r["e"])("", !0)]);
+    function s(e, t, n, s, a, o) {
+      var c = Object(r["x"])("router-view");
+      return Object(r["q"])(), Object(r["d"])("div", null, [Object(r["g"])("main", null, [Object(r["g"])(c)])]);
     }
 
-    n("d3b7"), n("ddb0");
-    var o = {
-      id: "right-panel",
-      "class": "relative bg-gray-800 border-l border-gray-600 h-full w-64 flex flex-col overflow-hidden flex-shrink-0"
-    },
-        l = Object(r["g"])("header", {
-      "class": "text-white text-xs font-medium tracking-wide flex justify-between items-center p-3 pb-0 "
-    }, [Object(r["g"])("div", {
-      "class": "flex items-center leading-5 py-px"
-    }, "Design")], -1),
-        u = {
-      "class": "w-full h-full relative z-10 scrollbar text-none overflow-auto"
-    },
-        d = {
-      "class": "items-center bg-white mb-2 text-center"
-    },
-        b = Object(r["g"])("option", {
-      value: ""
-    }, "--- Select ---", -1),
-        p = {
-      key: 2,
-      id: "presetColors"
-    };
-
-    function g(e, t, n, a, s, c) {
-      return Object(r["q"])(), Object(r["d"])("aside", o, [l, Object(r["g"])("section", u, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(c.designs, function (e, n) {
-        return Object(r["q"])(), Object(r["d"])("div", {
-          key: n,
-          "class": "mt-2"
-        }, [Object(r["g"])("h5", d, Object(r["x"])(e.designLabel), 1), "select" === e.designType ? Object(r["G"])((Object(r["q"])(), Object(r["d"])("select", {
-          key: 0,
-          "onUpdate:modelValue": function onUpdateModelValue(t) {
-            return e.designValue = t;
-          },
-          "class": "ml-2",
-          onChange: t[1] || (t[1] = function (e) {
-            return c.setValueToLayer();
-          })
-        }, [b, (Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(e.values, function (e, t) {
-          return Object(r["q"])(), Object(r["d"])("option", {
-            key: t,
-            value: e.classValue
-          }, Object(r["x"])(e.displayText), 9, ["value"]);
-        }), 128))], 40, ["onUpdate:modelValue"])), [[r["A"], e.designValue]]) : Object(r["e"])("", !0), "color" === e.designType ? Object(r["G"])((Object(r["q"])(), Object(r["d"])("input", {
-          key: 1,
-          type: "color",
-          id: "favcolor",
-          name: "favcolor",
-          "class": "ml-2",
-          "onUpdate:modelValue": function onUpdateModelValue(t) {
-            return e.designValue = t;
-          },
-          list: "presetColors",
-          onChange: t[2] || (t[2] = function (e) {
-            return c.setValueToLayer();
-          })
-        }, null, 40, ["onUpdate:modelValue"])), [[r["B"], e.designValue]]) : Object(r["e"])("", !0), "color" === e.designType ? (Object(r["q"])(), Object(r["d"])("datalist", p, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(e.values, function (e, t) {
-          return Object(r["q"])(), Object(r["d"])("option", {
-            key: t
-          }, Object(r["x"])(e.displayText), 1);
-        }), 128))])) : Object(r["e"])("", !0)]);
-      }), 128))])]);
-    }
-
-    n("159b");
-    var m = {
-      computed: {
-        designs: function designs() {
-          return this.$store.state.Designs;
-        },
-        Layers: function Layers() {
-          return this.$store.state.Layers;
-        }
-      },
-      methods: {
-        setValueToLayer: function setValueToLayer() {
-          var e = this;
-          this.Layers.forEach(function (t) {
-            t.focusable && (t.className = "", e.designs.forEach(function (e) {
-              "color" === e.designType ? e.values.forEach(function (n) {
-                n.displayText === e.designValue && (t.className = t.className + n.classValue + " ");
-              }) : t.className = t.className + e.designValue + " ";
-            }));
-          });
-        }
-      }
-    };
-    m.render = g;
-    var f = m,
-        j = {
-      id: "right-panel",
-      "class": "relative bg-gray-800 border-l border-gray-600 h-full w-64 flex flex-col overflow-hidden flex-shrink-0"
-    },
-        O = {
-      key: 0,
-      "class": "rounded px-6"
-    },
-        h = Object(r["g"])("div", {
-      "class": "sticky top-0 z-50 border-l-4 border-red-400 -ml-6 pl-6 flex items-center justify-between py-4"
-    }, [Object(r["g"])("div", {
-      "class": "font-semibold text-white"
-    }, "Projects")], -1),
-        v = Object(r["g"])("hr", {
-      "class": "-mx-6"
-    }, null, -1),
-        x = {
-      "class": "w-16"
-    },
-        y = {
-      "class": "flex-1 pl-2"
-    },
-        w = {
-      "class": "text-white font-semibold"
-    },
-        k = Object(r["g"])("div", {
-      "class": "text-gray-600 font-thin"
-    }, null, -1),
-        E = Object(r["g"])("hr", {
-      "class": "boder-b-0 my-4"
-    }, null, -1);
-
-    function V(e, t, n, a, s, c) {
-      return Object(r["q"])(), Object(r["d"])("aside", j, [c.projects && c.projects.length > 0 ? (Object(r["q"])(), Object(r["d"])("div", O, [h, v, (Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(c.projects, function (e, t) {
-        return Object(r["q"])(), Object(r["d"])(r["a"], {
-          key: t
-        }, [Object(r["g"])("div", {
-          "class": "flex items-center justify-between my-4",
-          onClick: function onClick(t) {
-            return c.getAllFrames(e);
-          }
-        }, [Object(r["g"])("div", x, [Object(r["g"])("img", {
-          "class": "w-12 h-12 rounded-full",
-          src: c.appURI + "uploads/" + e.image_Location + "/thumb_0.jpg"
-        }, null, 8, ["src"])]), Object(r["g"])("div", y, [Object(r["g"])("div", w, Object(r["x"])(e.project_name), 1), k])], 8, ["onClick"]), E], 64);
-      }), 128))])) : Object(r["e"])("", !0)]);
-    }
-
-    var N = {
-      data: function data() {
-        return {
-          tableHeader: []
-        };
-      },
-      created: function created() {
-        var e = this;
-        this.axios.get(this.appURI + "api/getProjects").then(function (t) {
-          e.$store.state.projects = t.data;
-        });
-      },
-      methods: {
-        getAllFrames: function getAllFrames(e) {
-          this.$store.state.selectedProject = e, this.$router.push("/project");
-        }
-      },
-      computed: {
-        projects: function projects() {
-          return this.$store.state.projects;
-        },
-        appURI: function appURI() {
-          return this.$store.state.appURI;
-        }
-      }
-    };
-    N.render = V;
-    var C = N,
-        I = {
-      "class": "flex justify-between bg-gray-900 border-b border-gray-600 text-white relative",
-      id: "nav-bar"
-    },
-        q = Object(r["g"])("div", {
-      "class": "flex-1 flex items-center"
-    }, [Object(r["g"])("a", {
-      href: "/",
-      "class": "p-3 h-full flex items-center group border-r border-gray-600"
-    }, " Image ")], -1);
-
-    function _(e, t) {
-      return Object(r["q"])(), Object(r["d"])("nav", I, [q]);
-    }
-
-    var A = {};
-    A.render = _;
-    var U = A,
-        R = {
-      "class": "flex w-full h-full fixed block h-screen text-center bg-white opacity-75 z-50"
-    },
-        L = Object(r["g"])("div", {
-      "class": "flex justify-around m-auto"
-    }, [Object(r["g"])("span", {
-      "class": "inline-flex rounded-md shadow-sm"
-    }, [Object(r["g"])("button", {
-      type: "button",
-      "class": "inline-flex items-center px-4 py-2 border border-transparent text-base text-xl leading-6 font-medium rounded-md text-gray-700 transition ease-in-out duration-150 cursor-not-allowed",
-      disabled: ""
-    }, [Object(r["g"])("svg", {
-      "class": "animate-spin -ml-1 mr-3 h-8 w-8 text-gray-700",
-      xmlns: "http://www.w3.org/2000/svg",
-      fill: "none",
-      viewBox: "0 0 24 24"
-    }, [Object(r["g"])("circle", {
-      "class": "opacity-25",
-      cx: "12",
-      cy: "12",
-      r: "10",
-      stroke: "currentColor",
-      "stroke-width": "4"
-    }), Object(r["g"])("path", {
-      "class": "opacity-75",
-      fill: "currentColor",
-      d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-    })]), Object(r["f"])(" Processing ")])])], -1);
-
-    function P(e, t) {
-      return Object(r["q"])(), Object(r["d"])("div", R, [L]);
-    }
-
-    var T = {};
-    T.render = P;
-    var S = T,
-        $ = {
+    var a = {
       name: "App",
-      components: {
-        Design: f,
-        NavBar: U,
-        Layers: C,
-        Loading: S
-      },
-      computed: {
-        Layers: function Layers() {
-          return this.$store.state.Layers;
-        },
-        loading: function loading() {
-          return this.$store.state.loading;
-        }
+      data: function data() {
+        return {};
       }
     };
-    $.render = i;
-    var z = $,
-        G = n("6c02"),
-        M = {
+    a.render = s;
+    var o = a,
+        c = (n("caad"), n("6c02")),
+        i = {
       "class": "py-8 px-4"
     },
-        F = Object(r["g"])("h2", {
+        l = Object(r["g"])("h2", {
       "class": "text-lg font-medium text-gray-900 truncate pb-8 px-1"
-    }, "Create Project", -1),
-        D = {
+    }, "Upload Video", -1),
+        u = {
       method: "post",
       action: "",
       enctype: "multipart/form-data",
       ref: "videoForm",
       "class": "w-full max-w-lg"
     },
-        B = {
+        d = {
       "class": "w-full flex flex-wrap -mx-3 mb-6"
     },
-        H = {
+        b = {
       "class": "w-1/2  px-3 mb-6 "
     },
-        Y = {
+        p = {
       "class": "w-1/3  px-3 mb-6 md:mb-0"
     },
-        X = {
+        g = {
       "class": "w-60 flex inline-flex items-center items-center px-4 py-1.5 bg-white hover:bg-gray-600 rounded-md shadow-md tracking-wide font-medium uppercase border border-blue cursor-pointer hover:bg-white-600 hover:text-white text-gray-600 ease-linear transition-all duration-150"
     },
-        J = Object(r["g"])("span", {
+        m = Object(r["g"])("span", {
       "class": "text-base leading-normal px-2"
     }, "Choose Video", -1),
-        W = {
+        f = {
       key: 0,
       "class": "flex flex-wrap -mx-4 -mb-8"
     };
 
-    function K(e, t, n, a, s, c) {
-      var i = Object(r["v"])("font-awesome-icon");
-      return Object(r["q"])(), Object(r["d"])("section", M, [F, Object(r["g"])("form", D, [Object(r["g"])("div", B, [Object(r["g"])("div", H, [Object(r["G"])(Object(r["g"])("input", {
+    function j(e, t, n, s, a, o) {
+      var c = Object(r["x"])("font-awesome-icon");
+      return Object(r["q"])(), Object(r["d"])("section", i, [l, Object(r["g"])("form", u, [Object(r["I"])(Object(r["g"])("input", {
+        type: "hidden",
+        name: "projectId",
+        id: "projectId",
+        "onUpdate:modelValue": t[1] || (t[1] = function (e) {
+          return o.projectId = e;
+        })
+      }, null, 512), [[r["D"], o.projectId]]), Object(r["g"])("div", d, [Object(r["g"])("div", b, [Object(r["I"])(Object(r["g"])("input", {
         type: "text",
         "class": "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
         name: "title",
-        "onUpdate:modelValue": t[1] || (t[1] = function (e) {
-          return s.formData.title = e;
+        "onUpdate:modelValue": t[2] || (t[2] = function (e) {
+          return a.formData.title = e;
         }),
-        placeholder: "Enter Project Name"
-      }, null, 512), [[r["B"], s.formData.title]])]), Object(r["g"])("div", Y, [Object(r["g"])("label", X, [Object(r["g"])(i, {
+        placeholder: "Video Title"
+      }, null, 512), [[r["D"], a.formData.title]])]), Object(r["g"])("div", p, [Object(r["g"])("label", g, [Object(r["g"])(c, {
         icon: "cloud-upload-alt",
         size: "1x"
-      }), J, Object(r["g"])("input", {
+      }), m, Object(r["g"])("input", {
         type: "file",
         "class": "hidden",
         name: "video",
-        onChange: t[2] || (t[2] = function () {
-          return c.onFileUpload && c.onFileUpload.apply(c, arguments);
+        onChange: t[3] || (t[3] = function () {
+          return o.onFileUpload && o.onFileUpload.apply(o, arguments);
         })
-      }, null, 32)])])])], 512), c.galleries ? (Object(r["q"])(), Object(r["d"])("div", W, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(c.galleries, function (e, t) {
+      }, null, 32)])])])], 512), o.galleries ? (Object(r["q"])(), Object(r["d"])("div", f, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(o.galleries, function (e, t) {
         return Object(r["q"])(), Object(r["d"])("div", {
           "class": "md:w-1/4 px-4 mb-8",
           key: t
@@ -453,8 +216,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       }), 128))])) : Object(r["e"])("", !0)]);
     }
 
-    var Q = n("1da1"),
-        Z = (n("96cf"), {
+    var O = n("1da1"),
+        h = (n("96cf"), n("159b"), {
       name: "App",
       data: function data() {
         return {
@@ -479,23 +242,27 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         },
         onFileUpload: function onFileUpload(e) {
           var t = this;
-          return Object(Q["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function e() {
-            var n, r, a;
+          return Object(O["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function e() {
+            var n, r, s;
             return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function (e) {
               while (1) {
                 switch (e.prev = e.next) {
                   case 0:
-                    return n = t.$refs.videoForm, r = new FormData(n), a = [], t.$store.state.loading = !0, e.next = 6, t.axios.post(t.appURI + "/api/upload", r).then(function (e) {
+                    return n = t.$refs.videoForm, r = new FormData(n), s = [], t.$store.state.loading = !0, e.next = 6, t.axios.post(t.appURI + "api/upload", r).then(function (e) {
                       e.data.files.forEach(function (e) {
-                        a.push(t.appURI + "uploads/" + e);
+                        s.push(t.appURI + "uploads/" + e);
                       });
                     });
 
                   case 6:
                     return t.$store.commit("GET_GALLERIES", {
-                      galArray: a
-                    }), e.next = 9, t.axios.get(t.appURI + "api/getProjects").then(function (e) {
-                      t.$store.state.projects = e.data;
+                      galArray: s
+                    }), e.next = 9, t.axios.get(t.appURI + "api/getVideos", {
+                      params: {
+                        project_id: t.projectId
+                      }
+                    }).then(function (e) {
+                      t.$store.state.projects = e.data, t.$router.push("/project"), t.$store.state.loading = !1;
                     });
 
                   case 9:
@@ -511,6 +278,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         Layers: function Layers() {
           return this.$store.state.Layers;
         },
+        projectId: function projectId() {
+          return this.$store.state.project_id;
+        },
         galleries: function galleries() {
           return this.$store.state.galleries;
         },
@@ -519,132 +289,164 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
       }
     });
-    Z.render = K;
-    var ee = Z,
-        te = {
-      key: 0,
+    h.render = j;
+    var x = h,
+        v = {
       "class": "bg-gray-100 w-full rounded py-8 px-4"
     },
-        ne = {
+        y = {
       "class": "flex justify-left items-center my-4"
     },
-        re = {
+        w = {
       "class": "bg-white p-16 text-left mx-auto border"
     },
-        ae = {
-      "class": "text-lg font-medium text-gray-900 truncate pb-8 px-1"
+        k = {
+      "class": "py-8 px-4"
     },
-        se = {
+        I = Object(r["g"])("h2", {
+      "class": "text-lg font-medium text-gray-900 truncate pb-8 px-1"
+    }, "Create Project", -1),
+        E = {
+      method: "post",
+      ref: "createForm",
+      "class": "w-full max-w-lg"
+    },
+        _ = {
+      "class": "w-full flex flex-wrap -mx-3 mb-6"
+    },
+        U = {
+      "class": "w-1/2  px-3 mb-6 "
+    },
+        C = {
+      "class": "w-1/3  px-3 mb-6 md:mb-0"
+    },
+        q = {
+      key: 0,
       "class": "flex flex-wrap -mx-4 -mb-8"
     };
 
-    function ce(e, t, n, a, s, c) {
-      var i = Object(r["v"])("classComponent");
-      return c.project ? (Object(r["q"])(), Object(r["d"])("div", te, [Object(r["g"])("ul", ne, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(s.tabs, function (e, t) {
+    function V(e, t, n, s, a, o) {
+      var c = Object(r["x"])("classComponent");
+      return Object(r["q"])(), Object(r["d"])("div", v, [Object(r["g"])("ul", y, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(a.tabs, function (e, t) {
         return Object(r["q"])(), Object(r["d"])("li", {
           key: t,
-          "class": ["cursor-pointer py-2 px-4 text-gray-500 border-b-8", s.activeTab === t ? "text-gray-700 border-gray-700" : ""],
+          "class": ["cursor-pointer py-2 px-4 text-gray-500 border-b-8", a.activeTab === t ? "text-gray-700 border-gray-700" : ""],
           onClick: function onClick(e) {
-            return s.activeTab = t;
+            return a.activeTab = t;
           },
-          textContent: Object(r["x"])(e)
+          textContent: Object(r["z"])(e)
         }, null, 10, ["onClick", "textContent"]);
-      }), 128))]), Object(r["g"])("div", re, [Object(r["G"])(Object(r["g"])("div", null, [Object(r["g"])("h2", ae, Object(r["x"])(c.project.project_name), 1), Object(r["g"])("div", se, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(c.project.video_duration, function (e, t) {
+      }), 128))]), Object(r["g"])("div", w, [Object(r["I"])(Object(r["g"])("div", null, [Object(r["g"])("section", k, [I, Object(r["g"])("form", E, [Object(r["g"])("div", _, [Object(r["g"])("div", U, [Object(r["I"])(Object(r["g"])("input", {
+        type: "text",
+        "class": "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+        name: "title",
+        "onUpdate:modelValue": t[1] || (t[1] = function (e) {
+          return a.formData.title = e;
+        }),
+        placeholder: "Enter Project Name"
+      }, null, 512), [[r["D"], a.formData.title]])]), Object(r["g"])("div", C, [Object(r["I"])(Object(r["g"])("textarea", {
+        "class": "resize border rounded-md",
+        "onUpdate:modelValue": t[2] || (t[2] = function (e) {
+          return a.formData.Description = e;
+        })
+      }, null, 512), [[r["D"], a.formData.Description]])]), Object(r["g"])("a", {
+        "class": "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
+        onClick: t[3] || (t[3] = function () {
+          return o.createProject && o.createProject.apply(o, arguments);
+        })
+      }, " Submit ")])], 512), o.galleries ? (Object(r["q"])(), Object(r["d"])("div", q, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(o.galleries, function (e, t) {
         return Object(r["q"])(), Object(r["d"])("div", {
           "class": "md:w-1/4 px-4 mb-8",
           key: t
         }, [Object(r["g"])("img", {
           "class": "rounded shadow-md",
-          src: c.appURI + "uploads/" + c.project.image_Location + "/thumb_" + e + ".jpg",
-          alt: "",
-          onClick: function onClick(t) {
-            return c.editImage(e, c.project);
-          }
-        }, null, 8, ["src", "onClick"])]);
-      }), 128))])], 512), [[r["C"], 0 === s.activeTab]]), Object(r["G"])(Object(r["g"])("div", null, [Object(r["g"])(i)], 512), [[r["C"], 1 === s.activeTab]])])])) : Object(r["e"])("", !0);
+          src: e,
+          alt: ""
+        }, null, 8, ["src"])]);
+      }), 128))])) : Object(r["e"])("", !0)])], 512), [[r["E"], 0 === a.activeTab]]), Object(r["I"])(Object(r["g"])("div", null, [Object(r["g"])(c)], 512), [[r["E"], 1 === a.activeTab]])])]);
     }
 
-    var ie = {
+    var L = {
       "class": "w-full bg-grey-500"
     },
-        oe = Object(r["g"])("span", {
+        P = Object(r["g"])("span", {
       "class": "px-2"
     }, "New Class", -1),
-        le = {
+        $ = {
       key: 0,
       "class": "container mx-auto py-8"
     },
-        ue = {
+        R = {
       key: 0,
       "class": "mx-2 py-4 px-8 text-black text-xl font-bold border-b border-grey-500"
     },
-        de = {
+        A = {
       name: "class_creation",
       id: "class_creation"
     },
-        be = {
+        N = {
       "class": "py-10 px-8"
     },
-        pe = {
+        S = {
       "class": "mb-4"
     },
-        ge = Object(r["g"])("span", {
+        D = Object(r["g"])("span", {
       "class": "px-2"
     }, "Add Attributes", -1),
-        me = {
+        z = {
       "class": "flex flex-row py-2 px-8"
     },
-        fe = {
+        T = {
       "class": "w-1/4 "
     },
-        je = {
+        B = {
       "class": "w-1/4"
     },
-        Oe = {
+        H = {
       key: 0,
       "class": "w-1/4"
     },
-        he = {
+        F = {
       "class": "border flex flex-wrap items-stretch w-full relative py-2 px-3  bg-white items-center rounded"
     },
-        ve = {
+        M = {
       "class": "flex -mr-px"
     },
-        xe = {
+        Y = {
       "class": "flex items-center leading-normal bg-white rounded rounded-l-none border-0 px-3 whitespace-no-wrap text-gray-600"
     },
-        ye = {
+        G = {
       "class": "flex w-1/4 px-3 items-center"
     },
-        we = {
+        X = {
       "class": "align-middle py-3 "
     },
-        ke = {
+        J = {
       "class": "align-middle py-3 "
     },
-        Ee = {
+        K = {
       key: 0,
       "class": "flex flex-row py-2 px-8"
     },
-        Ve = {
+        Z = {
       "class": "text-xs font-normal py-2 px-2"
     };
 
-    function Ne(e, t, n, a, s, c) {
-      var i = Object(r["v"])("font-awesome-icon");
-      return Object(r["q"])(), Object(r["d"])("div", ie, [Object(r["g"])("button", {
+    function W(e, t, n, s, a, o) {
+      var c = Object(r["x"])("font-awesome-icon");
+      return Object(r["q"])(), Object(r["d"])("div", L, [Object(r["g"])("button", {
         "class": "bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center",
         onClick: t[1] || (t[1] = function () {
-          return c.addClass && c.addClass.apply(c, arguments);
+          return o.addClass && o.addClass.apply(o, arguments);
         })
-      }, [Object(r["g"])(i, {
+      }, [Object(r["g"])(c, {
         icon: "plus",
         size: "1x"
-      }), oe]), s.classes && s.classes.length > 0 ? (Object(r["q"])(), Object(r["d"])("div", le, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(s.classes, function (t, n) {
+      }), P]), a.classes && a.classes.length > 0 ? (Object(r["q"])(), Object(r["d"])("div", $, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(a.classes, function (t, n) {
         return Object(r["q"])(), Object(r["d"])("div", {
           "class": "w-full mx-auto bg-white rounded shadow",
           key: n
-        }, ["" !== t.className ? (Object(r["q"])(), Object(r["d"])("div", ue, Object(r["x"])(t.className), 1)) : Object(r["e"])("", !0), Object(r["g"])("form", de, [Object(r["g"])("div", be, [Object(r["g"])("div", pe, [Object(r["G"])(Object(r["g"])("input", {
+        }, ["" !== t.className ? (Object(r["q"])(), Object(r["d"])("div", R, Object(r["z"])(t.className), 1)) : Object(r["e"])("", !0), Object(r["g"])("form", A, [Object(r["g"])("div", N, [Object(r["g"])("div", S, [Object(r["I"])(Object(r["g"])("input", {
           "class": "w-3/4 border rounded py-2 px-3 text-grey-darker",
           type: t.type,
           name: t.idName,
@@ -653,84 +455,85 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
             return t.className = e;
           },
           placeholder: t.placeHolder
-        }, null, 8, ["type", "name", "id", "onUpdate:modelValue", "placeholder"]), [[r["z"], t.className]]), Object(r["g"])("button", {
-          onClick: Object(r["H"])(function (e) {
-            return c.saveClass(t);
+        }, null, 8, ["type", "name", "id", "onUpdate:modelValue", "placeholder"]), [[r["B"], t.className]]), Object(r["g"])("button", {
+          onClick: Object(r["J"])(function (e) {
+            return o.saveClass(t);
           }, ["prevent"])
-        }, [Object(r["g"])(i, {
+        }, [Object(r["g"])(c, {
           icon: "save",
           size: "1x",
           "class": "mx-3"
         })], 8, ["onClick"])]), Object(r["g"])("a", {
           "class": "bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center",
           onClick: function onClick(e) {
-            return c.addAttributes(t);
+            return o.addAttributes(t);
           }
-        }, [Object(r["g"])(i, {
+        }, [Object(r["g"])(c, {
           icon: "plus",
           size: "1x"
-        }), ge], 8, ["onClick"]), t.attributes && t.attributes.length > 0 ? (Object(r["q"])(!0), Object(r["d"])(r["a"], {
+        }), D], 8, ["onClick"]), t.attributes && t.attributes.length > 0 ? (Object(r["q"])(!0), Object(r["d"])(r["a"], {
           key: 0
-        }, Object(r["u"])(t.attributes, function (a, s) {
+        }, Object(r["w"])(t.attributes, function (s, a) {
           return Object(r["q"])(), Object(r["d"])("div", {
             "class": "w-full mx-auto bg-white mb-4 mt-4",
-            key: s + n
-          }, [Object(r["g"])("div", me, [Object(r["g"])("div", fe, [Object(r["G"])(Object(r["g"])("input", {
+            key: a + n
+          }, [Object(r["g"])("div", z, [Object(r["g"])("div", T, [Object(r["I"])(Object(r["g"])("input", {
             "class": " border rounded  py-2 px-3 text-grey-darker border-0 relative self-center outline-none",
-            type: a.nametype,
-            name: a.idName,
-            id: a.idName,
+            type: s.nametype,
+            name: s.idName,
+            id: s.idName,
             "onUpdate:modelValue": function onUpdateModelValue(e) {
-              return a.attributeName = e;
+              return s.attributeName = e;
             },
-            placeholder: a.placeHolder
-          }, null, 8, ["type", "name", "id", "onUpdate:modelValue", "placeholder"]), [[r["z"], a.attributeName]])]), Object(r["g"])("div", je, [Object(r["G"])(Object(r["g"])("select", {
+            placeholder: s.placeHolder
+          }, null, 8, ["type", "name", "id", "onUpdate:modelValue", "placeholder"]), [[r["B"], s.attributeName]])]), Object(r["g"])("div", B, [Object(r["I"])(Object(r["g"])("select", {
             "onUpdate:modelValue": function onUpdateModelValue(e) {
-              return a.attributeType = e;
+              return s.attributeType = e;
             },
             "class": "border rounded w-3/4 py-2 px-3 text-grey-darker border-0 relative self-center outline-none"
-          }, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(a.typeValues, function (e, t) {
+          }, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(s.typeValues, function (e, t) {
             return Object(r["q"])(), Object(r["d"])("option", {
               key: t
-            }, Object(r["x"])(e), 1);
-          }), 128))], 8, ["onUpdate:modelValue"]), [[r["A"], a.attributeType]])]), "select" === a.attributeType ? (Object(r["q"])(), Object(r["d"])("div", Oe, [Object(r["g"])("div", he, [Object(r["G"])(Object(r["g"])("input", {
+            }, Object(r["z"])(e), 1);
+          }), 128))], 8, ["onUpdate:modelValue"]), [[r["C"], s.attributeType]])]), "select" === s.attributeType ? (Object(r["q"])(), Object(r["d"])("div", H, [Object(r["g"])("div", F, [Object(r["I"])(Object(r["g"])("input", {
             "class": "flex-shrink flex-grow flex-auto leading-normal w-px flex-1 border-0 relative self-center outline-none",
             type: "text",
             name: "selectValue",
             id: "selectValue",
             "onUpdate:modelValue": function onUpdateModelValue(e) {
-              return a.selectValue = e;
+              return s.selectValue = e;
             },
             placeholder: "Enter Select Value"
-          }, null, 8, ["onUpdate:modelValue"]), [[r["B"], a.selectValue]]), Object(r["g"])("div", ve, [Object(r["g"])("span", xe, [Object(r["g"])(i, {
+          }, null, 8, ["onUpdate:modelValue"]), [[r["D"], s.selectValue]]), Object(r["g"])("div", M, [Object(r["g"])("span", Y, [Object(r["g"])(c, {
             icon: "plus",
             size: "1x",
             onClick: function onClick(e) {
-              return c.addAttributesValues(a);
+              return o.addAttributesValues(s);
             }
-          }, null, 8, ["onClick"])])])])])) : Object(r["e"])("", !0), Object(r["g"])("div", ye, [Object(r["g"])("div", we, [Object(r["g"])("a", {
-            onClick: Object(r["H"])(function (e) {
-              return c.saveAttributes(t, a);
+          }, null, 8, ["onClick"])])])])])) : Object(r["e"])("", !0), Object(r["g"])("div", G, [Object(r["g"])("div", X, [Object(r["g"])("a", {
+            "class": "cursor-pointer",
+            onClick: Object(r["J"])(function (e) {
+              return o.saveAttributes(t, s);
             }, ["prevent"])
-          }, [Object(r["g"])(i, {
+          }, [Object(r["g"])(c, {
             icon: "save",
             size: "1x"
-          })], 8, ["onClick"])]), Object(r["g"])("div", ke, [Object(r["g"])("button", {
+          })], 8, ["onClick"])]), Object(r["g"])("div", J, [Object(r["g"])("button", {
             onClick: function onClick(t) {
-              return e.deleteAttributesValues(a);
+              return e.deleteAttributesValues(s);
             }
-          }, [Object(r["g"])(i, {
+          }, [Object(r["g"])(c, {
             icon: "trash",
             size: "1x"
-          })], 8, ["onClick"])])])]), "select" === a.attributeType && a.attributeValues.length > 0 ? (Object(r["q"])(), Object(r["d"])("div", Ee, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(a.attributeValues, function (e, t) {
+          })], 8, ["onClick"])])])]), "select" === s.attributeType && s.attributeValues.length > 0 ? (Object(r["q"])(), Object(r["d"])("div", K, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(s.attributeValues, function (e, t) {
             return Object(r["q"])(), Object(r["d"])("div", {
               "class": "flex w-auto  justify-center items-center m-1 px-5 py-1 rounded-full bg-green-700 text-base text-white font-medium",
               key: t
-            }, [Object(r["g"])("div", Ve, Object(r["x"])(e), 1), Object(r["g"])(i, {
+            }, [Object(r["g"])("div", Z, Object(r["z"])(e), 1), Object(r["g"])(c, {
               icon: "times",
               size: "1x",
               onClick: function onClick(e) {
-                return c.addAttributesValues(a);
+                return o.addAttributesValues(s);
               }
             }, null, 8, ["onClick"])]);
           }), 128))])) : Object(r["e"])("", !0)]);
@@ -738,8 +541,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       }), 128))])) : Object(r["e"])("", !0)]);
     }
 
-    n("25f0");
-    var Ce = {
+    n("d3b7"), n("25f0");
+    var Q = {
       data: function data() {
         return {
           "class": {
@@ -767,7 +570,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       methods: {
         addClass: function addClass() {
           var e = this;
-          return Object(Q["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function t() {
+          return Object(O["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function t() {
             var n;
             return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function (t) {
               while (1) {
@@ -785,13 +588,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         },
         saveClass: function saveClass(e) {
           var t = this;
-          return Object(Q["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function n() {
+          return Object(O["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function n() {
             return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function (n) {
               while (1) {
                 switch (n.prev = n.next) {
                   case 0:
                     return n.next = 2, t.axios.post(t.appURI + "api/createClass", {
-                      projectid: t.$store.state.selectedProject.id,
+                      projectid: t.$store.state.project_id,
                       className: e.className
                     }).then(function (n) {
                       e.classId = n.data.last_insert_id, t.last_ID = n.data.last_insert_id;
@@ -811,7 +614,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         },
         saveAttributes: function saveAttributes(e, t) {
           var n = this;
-          return Object(Q["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function r() {
+          return Object(O["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function r() {
             return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function (r) {
               while (1) {
                 switch (r.prev = r.next) {
@@ -843,13 +646,100 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
       }
     };
-    Ce.render = Ne;
-    var Ie = Ce,
-        qe = {
-      name: "Grid",
+    Q.render = W;
+    var ee = Q,
+        te = {
+      name: "App",
       components: {
-        classComponent: Ie
+        classComponent: ee
       },
+      data: function data() {
+        return {
+          tabs: ["Projects", "Attributes"],
+          activeTab: 0,
+          formData: {
+            title: "",
+            description: ""
+          },
+          projects: []
+        };
+      },
+      methods: {
+        createProject: function createProject() {
+          var e = this;
+          return Object(O["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function t() {
+            var n, r;
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function (t) {
+              while (1) {
+                switch (t.prev = t.next) {
+                  case 0:
+                    return n = e.$refs.createForm, r = new FormData(n), e.$store.state.loading = !0, t.next = 5, e.axios.post(e.appURI + "api/createProject", r).then(function (t) {
+                      e.$store.state.project_id = t.data.last_insert_id;
+                    });
+
+                  case 5:
+                    return t.next = 7, e.axios.get(e.appURI + "api/getProjects").then(function (t) {
+                      e.$store.state.mainProjects = t.data;
+                    });
+
+                  case 7:
+                    e.activeTab = 1;
+
+                  case 8:
+                  case "end":
+                    return t.stop();
+                }
+              }
+            }, t);
+          }))();
+        }
+      },
+      computed: {
+        Layers: function Layers() {
+          return this.$store.state.Layers;
+        },
+        galleries: function galleries() {
+          return this.$store.state.galleries;
+        },
+        appURI: function appURI() {
+          return this.$store.state.appURI;
+        }
+      }
+    };
+    te.render = V;
+    var ne = te,
+        re = {
+      key: 0,
+      "class": "bg-gray-100 w-full rounded py-8 px-4"
+    },
+        se = {
+      "class": "bg-white p-16 text-left mx-auto border"
+    },
+        ae = {
+      "class": "text-lg font-medium text-gray-900 truncate pb-8 px-1"
+    },
+        oe = {
+      "class": "flex flex-wrap -mx-4 -mb-8"
+    };
+
+    function ce(e, t, n, s, a, o) {
+      return o.project ? (Object(r["q"])(), Object(r["d"])("div", re, [Object(r["g"])("div", se, [Object(r["g"])("div", null, [Object(r["g"])("h2", ae, Object(r["z"])(o.project.project_name), 1), Object(r["g"])("div", oe, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(o.project.Details, function (e, t) {
+        return Object(r["q"])(), Object(r["d"])("div", {
+          "class": "md:w-1/4 px-4 mb-8",
+          key: t
+        }, [Object(r["g"])("img", {
+          "class": "rounded shadow-md",
+          src: o.appURI + "uploads/" + e.image_Location,
+          alt: "",
+          onClick: function onClick(t) {
+            return o.editImage(e, o.project);
+          }
+        }, null, 8, ["src", "onClick"])]);
+      }), 128))])])])])) : Object(r["e"])("", !0);
+    }
+
+    var ie = {
+      name: "Grid",
       data: function data() {
         return {
           activeTab: 0,
@@ -867,52 +757,111 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       },
       methods: {
         editImage: function editImage(e, t) {
-          this.$store.state.selectedImage = e, this.$router.push("/editor");
+          e.boundingBoxes = [], this.$store.state.selectedImage = e.image_Location, this.$router.push("/editor");
         }
       }
     };
-    qe.render = ce;
-    var _e = qe,
-        Ae = {
+    ie.render = ce;
+    var le = ie,
+        ue = {
       "class": "w-full overflow-hidden"
     };
 
-    function Ue(e, t, n, a, s, c) {
-      var i = Object(r["v"])("bb-component"),
-          o = Object(r["v"])("carousal");
-      return Object(r["q"])(), Object(r["d"])("div", Ae, [Object(r["g"])(i, {
-        src: c.imgSrc
-      }, null, 8, ["src"]), Object(r["g"])(o)]);
+    function de(e, t, n, s, a, o) {
+      var c = Object(r["x"])("bb-component"),
+          i = Object(r["x"])("carousal");
+      return Object(r["q"])(), Object(r["d"])("div", ue, [Object(r["g"])(c, {
+        src: o.imgSrc,
+        project: o.project,
+        key: o.selectedImage
+      }, null, 8, ["src", "project"]), Object(r["g"])(i)]);
     }
 
-    function Re(e, t, n, a, s, c) {
-      return s.imgsize ? (Object(r["q"])(), Object(r["d"])("svg", {
+    function be(e, t, n, s, a, o) {
+      return a.imgsize ? (Object(r["q"])(), Object(r["d"])("svg", {
         key: 0,
-        viewBox: "0 0 " + s.imgsize.width + " " + s.imgsize.height,
-        id: "viewport",
-        onload: "makeDraggable"
+        viewBox: "0 0 " + a.imgsize.width + " " + a.imgsize.height,
+        id: "viewport"
       }, [Object(r["g"])("image", {
         "xlink:href": n.src,
         width: "100%",
         height: "100%"
-      }, null, 8, ["xlink:href"]), (Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(e.bbs, function (e, t) {
+      }, null, 8, ["xlink:href"]), (Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(o.bbs.boundingBoxes, function (e, t) {
         return Object(r["q"])(), Object(r["d"])("rect", {
           key: "bb" + t,
-          x: e.left * s.imgsize.width || "0",
-          y: e.top * s.imgsize.height || "0",
-          width: e.width * s.imgsize.width || "0",
-          height: e.height * s.imgsize.height || "0",
-          fill: "none",
+          x: e.x || "0",
+          y: e.y || "0",
+          width: e.w || "0",
+          height: e.h || "0",
+          fill: "#EF5350",
+          "fill-opacity": "0.4",
           stroke: n.bbcolor || "#EF5350",
           "stroke-width": n.bbstroke || "2",
           "vector-effect": "non-scaling-stroke",
-          "shape-rendering": "crispEdges"
-        }, null, 8, ["x", "y", "width", "height", "stroke", "stroke-width"]);
+          "shape-rendering": "crispEdges",
+          "class": ["draggable", "bb-" + t + " cursor-move"]
+        }, null, 10, ["x", "y", "width", "height", "stroke", "stroke-width"]);
+      }), 128)), (Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(o.bbs.boundingBoxes, function (e, t) {
+        return Object(r["q"])(), Object(r["d"])("circle", {
+          key: "bb" + t,
+          cx: e.x + e.w || "0",
+          cy: e.y || "0",
+          r: "15",
+          fill: "#EF5350",
+          "fill-opacity": "0.4",
+          stroke: n.bbcolor || "#EF5350",
+          "stroke-width": n.bbstroke || "2",
+          "vector-effect": "non-scaling-stroke",
+          "shape-rendering": "crispEdges",
+          "class": ["resize", "bb-" + t]
+        }, null, 10, ["cx", "cy", "stroke", "stroke-width"]);
+      }), 128)), (Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(o.bbs.boundingBoxes, function (e, t) {
+        return Object(r["q"])(), Object(r["d"])("circle", {
+          key: "bb" + t,
+          cx: e.x || "0",
+          cy: e.y + e.h || "0",
+          r: "15",
+          fill: "#EF5350",
+          "fill-opacity": "0.4",
+          stroke: n.bbcolor || "#EF5350",
+          "stroke-width": n.bbstroke || "2",
+          "vector-effect": "non-scaling-stroke",
+          "shape-rendering": "crispEdges",
+          "class": ["resize", "bb-" + t]
+        }, null, 10, ["cx", "cy", "stroke", "stroke-width"]);
+      }), 128)), (Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(o.bbs.boundingBoxes, function (e, t) {
+        return Object(r["q"])(), Object(r["d"])("circle", {
+          key: "bb" + t,
+          cx: e.x || "0",
+          cy: e.y || "0",
+          r: "15",
+          fill: "#EF5350",
+          "fill-opacity": "0.4",
+          stroke: n.bbcolor || "#EF5350",
+          "stroke-width": n.bbstroke || "2",
+          "vector-effect": "non-scaling-stroke",
+          "shape-rendering": "crispEdges",
+          "class": ["resize", "bb-" + t]
+        }, null, 10, ["cx", "cy", "stroke", "stroke-width"]);
+      }), 128)), (Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(o.bbs.boundingBoxes, function (e, t) {
+        return Object(r["q"])(), Object(r["d"])("circle", {
+          key: "bb" + t,
+          cx: e.x + e.w || "0",
+          cy: e.y + e.h || "0",
+          r: "15",
+          fill: "#EF5350",
+          "fill-opacity": "0.4",
+          stroke: n.bbcolor || "#EF5350",
+          "stroke-width": n.bbstroke || "2",
+          "vector-effect": "non-scaling-stroke",
+          "shape-rendering": "crispEdges",
+          "class": ["resize", "bb-" + t]
+        }, null, 10, ["cx", "cy", "stroke", "stroke-width"]);
       }), 128))], 8, ["viewBox"])) : Object(r["e"])("", !0);
     }
 
-    n("99af");
-    var Le = {
+    n("99af"), n("07ac"), n("b0c0");
+    var pe = {
       props: ["src", "bbcolor", "bbstroke"],
       data: function data() {
         return {
@@ -926,6 +875,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           isDrawing: !1,
           baseImage: Object,
           selectedElement: !1,
+          draggingElement: "",
           offset: null,
           transform: null,
           annotation: {
@@ -941,7 +891,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       },
       mounted: function mounted() {
         var e = this;
-        return Object(Q["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function t() {
+        return Object(O["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function t() {
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function (t) {
             while (1) {
               switch (t.prev = t.next) {
@@ -966,65 +916,95 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           }, t);
         }))();
       },
+      computed: {
+        projectDetails: function projectDetails() {
+          return this.$store.state.selectedProject.Details;
+        },
+        selectedImage: function selectedImage() {
+          return this.$store.state.selectedImage;
+        },
+        bbs: function bbs() {
+          var e,
+              t = this;
+          return Object.values(this.projectDetails).forEach(function (n) {
+            n.image_Location === t.selectedImage && (e = n);
+          }), e;
+        }
+      },
       methods: {
         handleMouseDown: function handleMouseDown(e) {
           var t = this;
+          return Object(O["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function n() {
+            var r, s, a, o, c, i, l, u, d;
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function (n) {
+              while (1) {
+                switch (n.prev = n.next) {
+                  case 0:
+                    e.target.classList.contains("draggable") ? (r = e.target.classList[1].toString().substring(3), t.selectedElement = e.target, s = function s(e) {
+                      if (t.selectedElement) {
+                        var n = {
+                          x: t.bbs.boundingBoxes[r].x,
+                          y: t.bbs.boundingBoxes[r].y
+                        };
+                        e.preventDefault();
+                        var s = t.svgPoint(t.svgElement, e.clientX, e.clientY);
+                        t.bbs.boundingBoxes[r].x = s.x - n.x, t.bbs.boundingBoxes[r].y = s.y - n.y;
+                      }
+                    }, a = function e(n) {
+                      t.svgElement.removeEventListener("mousemove", s), t.svgElement.removeEventListener("mouseup", e), t.svgElement.removeEventListener("mouseleave", e), t.selectedElement = null;
+                    }, t.svgElement.addEventListener("mousemove", s), t.svgElement.addEventListener("mouseup", a), t.svgElement.addEventListener("mouseleave", a)) : e.target.classList.contains("resize") ? (r = e.target.classList[1].toString().substring(3), t.draggingElement = e.target, o = function o(e) {
+                      if (t.draggingElement) {
+                        e.preventDefault();
+                        var n = t.svgPoint(t.svgElement, e.clientX, e.clientY);
+                        t.bbs.boundingBoxes[r].w = Math.max(n.x, 1), t.bbs.boundingBoxes[r].h = Math.max(n.y, 1);
+                      }
+                    }, c = function e(n) {
+                      t.svgElement.removeEventListener("mousemove", o), t.svgElement.removeEventListener("mouseup", e), t.svgElement.removeEventListener("mouseleave", e), t.draggingElement = null;
+                    }, t.svgElement.addEventListener("mousemove", o), t.svgElement.addEventListener("mouseup", c), t.svgElement.addEventListener("mouseleave", c)) : (i = document.createElementNS("http://www.w3.org/2000/svg", "rect"), l = t.svgPoint(t.svgElement, e.clientX, e.clientY), u = function u(e) {
+                      var n = t.svgPoint(t.svgElement, e.clientX, e.clientY),
+                          r = Math.abs(n.x - l.x),
+                          s = Math.abs(n.y - l.y);
+                      n.x > l.x && (n.x = l.x), n.y > l.y && (n.y = l.y), i.setAttributeNS(null, "x", n.x), i.setAttributeNS(null, "y", n.y), i.setAttributeNS(null, "width", r), i.setAttributeNS(null, "height", s), i.setAttributeNS(null, "stroke", "#EF5350"), i.setAttributeNS(null, "fill", "#EF5350"), i.setAttributeNS(null, "fill-opacity", "0.4"), i.setAttributeNS(null, "stroke-width", "2"), i.setAttributeNS(null, "vector-effect", "non-scaling-stroke"), i.setAttributeNS(null, "shape-rendering", "crispEdges"), i.setAttributeNS(null, "class", "draggable"), t.svgElement.appendChild(i), l.x = n.x, l.y = n.y;
+                    }, d = function () {
+                      var e = Object(O["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function e(n) {
+                        var r, s, a, o;
+                        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function (e) {
+                          while (1) {
+                            switch (e.prev = e.next) {
+                              case 0:
+                                r = t.svgPoint(t.svgElement, n.clientX, n.clientY), s = Math.abs(r.x - l.x), a = Math.abs(r.y - l.y), o = Object.create(t.annotation), o.x = l.x, o.y = l.y, o.w = s, o.h = a, o.selectedClass = "", o.selectedAttribute = "", o.attributeValues = [], o.name = "Bounding Box Name", s > 10 && a > 10 && (t.boundingBoxes.push(o), t.$store.commit("PUSH_BOUNDING_BOX", t.boundingBoxes)), t.svgElement.removeChild(i), t.svgElement.removeEventListener("mousemove", u), t.svgElement.removeEventListener("mouseup", d);
 
-          if (e.target.classList.contains("draggable")) {
-            this.selectedElement = e.target, this.offset = this.getMousePosition(e);
-            var n = this.selectedElement.transform.baseVal;
+                              case 16:
+                              case "end":
+                                return e.stop();
+                            }
+                          }
+                        }, e);
+                      }));
+                      return function (t) {
+                        return e.apply(this, arguments);
+                      };
+                    }(), t.svgElement.addEventListener("mousemove", u), t.svgElement.addEventListener("mouseup", d));
 
-            if (0 === n.length || n.getItem(0).type !== SVGTransform.SVG_TRANSFORM_TRANSLATE) {
-              var r = this.svgElement.createSVGTransform();
-              r.setTranslate(0, 0), this.selectedElement.transform.baseVal.insertItemBefore(r, 0);
-            }
-
-            this.transform = n.getItem(0), this.offset.x -= this.transform.matrix.e, this.offset.y -= this.transform.matrix.f;
-
-            var a = function a(e) {
-              if (t.selectedElement) {
-                e.preventDefault();
-                var n = t.getMousePosition(e);
-                t.transform.setTranslate(n.x - t.offset.x, n.y - t.offset.y);
+                  case 1:
+                  case "end":
+                    return n.stop();
+                }
               }
-            },
-                s = function s(e) {
-              t.selectedElement = null;
-            };
-
-            this.svgElement.addEventListener("mousemove", a), this.svgElement.addEventListener("mouseup", s), this.svgElement.addEventListener("mouseleave", s);
-          } else {
-            var c = document.createElementNS("http://www.w3.org/2000/svg", "rect"),
-                i = this.svgPoint(this.svgElement, e.clientX, e.clientY),
-                o = function o(e) {
-              var n = t.svgPoint(t.svgElement, e.clientX, e.clientY),
-                  r = Math.abs(n.x - i.x),
-                  a = Math.abs(n.y - i.y);
-              n.x > i.x && (n.x = i.x), n.y > i.y && (n.y = i.y), c.setAttributeNS(null, "x", n.x), c.setAttributeNS(null, "y", n.y), c.setAttributeNS(null, "width", r), c.setAttributeNS(null, "height", a), c.setAttributeNS(null, "stroke", "#EF5350"), c.setAttributeNS(null, "fill", "#EF5350"), c.setAttributeNS(null, "fill-opacity", "0.4"), c.setAttributeNS(null, "stroke-width", "2"), c.setAttributeNS(null, "vector-effect", "non-scaling-stroke"), c.setAttributeNS(null, "shape-rendering", "crispEdges"), c.setAttributeNS(null, "class", "draggable"), t.svgElement.appendChild(c), i.x = n.x, i.y = n.y;
-            },
-                l = function e(n) {
-              var r = t.svgPoint(t.svgElement, n.clientX, n.clientY),
-                  a = Math.abs(r.x - i.x),
-                  s = Math.abs(r.y - i.y),
-                  c = Object.create(t.annotation);
-              c.x = i.x, c.y = i.y, c.w = a, c.h = s, t.boundingBoxes.push(c), console.log(t.boundingBoxes), c.printCoordinates(), t.svgElement.removeEventListener("mousemove", o), t.svgElement.removeEventListener("mouseup", e);
-            };
-
-            this.svgElement.addEventListener("mousemove", o), this.svgElement.addEventListener("mouseup", l);
-          }
+            }, n);
+          }))();
         },
         getMousePosition: function getMousePosition(e) {
-          var t = this.svgElement.getScreenCTM();
           return {
-            x: (e.clientX - t.e) / t.a,
-            y: (e.clientY - t.f) / t.d
+            x: e.clientX,
+            y: e.clientY
           };
         },
         createPoints: function createPoints() {
           var e = this;
           this.svgElement = document.querySelector("#viewport"), this.svgPoint = function (t, n, r) {
-            var a = e.svgElement.createSVGPoint();
-            return a.x = n, a.y = r, a.matrixTransform(t.getScreenCTM().inverse());
+            var s = e.svgElement.createSVGPoint();
+            return s.x = n, s.y = r, s.matrixTransform(t.getScreenCTM().inverse());
           }, this.svgElement.addEventListener("mousedown", this.handleMouseDown);
         },
         getImageSize: function getImageSize(e) {
@@ -1040,32 +1020,34 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
       }
     };
-    Le.render = Re;
-    var Pe = Le;
+    pe.render = be;
+    var ge = pe;
 
-    function Te(e, t, n, a, s, c) {
-      var i = this,
-          o = Object(r["v"])("slide"),
-          l = Object(r["v"])("navigation"),
-          u = Object(r["v"])("carousel", !0);
-      return c.project ? (Object(r["q"])(), Object(r["d"])(u, {
+    function me(e, t, n, s, a, o) {
+      var c = Object(r["x"])("slide"),
+          i = Object(r["x"])("navigation"),
+          l = Object(r["x"])("carousel", !0);
+      return o.project ? (Object(r["q"])(), Object(r["d"])(l, {
         key: 0,
         "items-to-show": "7",
         "class": "my-2 m-auto w-11/12"
       }, {
-        addons: Object(r["F"])(function () {
-          return [Object(r["g"])(l)];
+        addons: Object(r["H"])(function () {
+          return [Object(r["g"])(i)];
         }),
-        "default": Object(r["F"])(function () {
-          return [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["u"])(c.project.video_duration, function (e) {
-            return Object(r["q"])(), Object(r["d"])(o, {
+        "default": Object(r["H"])(function () {
+          return [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(o.project.Details, function (e) {
+            return Object(r["q"])(), Object(r["d"])(c, {
               key: e
             }, {
-              "default": Object(r["F"])(function () {
+              "default": Object(r["H"])(function () {
                 return [Object(r["g"])("img", {
-                  src: c.appURI + "/uploads/" + i.project.image_Location + "/thumb_" + e + ".jpg",
-                  "class": "w-40"
-                }, null, 8, ["src"])];
+                  src: o.appURI + "/uploads/" + e.image_Location,
+                  "class": "w-40",
+                  onClick: function onClick(t) {
+                    return o.changeImage(e.image_Location);
+                  }
+                }, null, 8, ["src", "onClick"])];
               }),
               _: 2
             }, 1024);
@@ -1076,13 +1058,18 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     }
 
     n("4001");
-    var Se = n("0b81"),
-        $e = {
+    var fe = n("0b81"),
+        je = {
       name: "App",
       components: {
-        Carousel: Se["a"],
-        Slide: Se["c"],
-        Navigation: Se["b"]
+        Carousel: fe["a"],
+        Slide: fe["c"],
+        Navigation: fe["b"]
+      },
+      methods: {
+        changeImage: function changeImage(e) {
+          this.$store.state.designComponent = this.$store.state.designComponent + 1, this.$store.state.bboxComponent = this.$store.state.bboxComponent++, this.$store.state.selectedImage = e;
+        }
       },
       computed: {
         project: function project() {
@@ -1096,76 +1083,864 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
       }
     };
-    $e.render = Te;
-    var ze = $e,
-        Ge = {
+    je.render = me;
+    var Oe = je,
+        he = {
       components: {
-        carousal: ze,
-        bbComponent: Pe
+        carousal: Oe,
+        bbComponent: ge
+      },
+      data: function data() {
+        return {
+          componentKey: 0
+        };
+      },
+      methods: {
+        forceRerender: function forceRerender(e) {
+          this.componentKey += 1;
+        }
       },
       computed: {
         project: function project() {
           return this.$store.state.selectedProject;
         },
-        number: function number() {
+        selectedImage: function selectedImage() {
           return this.$store.state.selectedImage;
         },
         appURI: function appURI() {
           return this.$store.state.appURI;
         },
         imgSrc: function imgSrc() {
-          return this.appURI + "uploads/" + this.project.image_Location + "/thumb_" + this.number + ".jpg";
+          return this.appURI + "uploads/" + this.selectedImage;
         }
       }
     };
-    Ge.render = Ue;
-    var Me = Ge,
-        Fe = [{
-      path: "/",
-      name: "Home",
-      component: ee
-    }, {
-      path: "/project",
-      name: "Grid",
-      component: _e
-    }, {
-      path: "/editor",
-      name: "Editor",
-      component: Me
-    }],
-        De = Object(G["a"])({
-      history: Object(G["b"])("/"),
-      routes: Fe
+    he.render = de;
+    var xe = he,
+        ve = {
+      "class": "h-screen w-screen bg-white flex flex-col"
+    },
+        ye = {
+      "class": "relative flex flex-1 flex-row"
+    },
+        we = {
+      "class": "w-full h-full relative z-10 scrollbar text-left text-none"
+    };
+
+    function ke(e, t, n, s, a, o) {
+      var c = Object(r["x"])("NavBar"),
+          i = Object(r["x"])("Layers"),
+          l = Object(r["x"])("Videos"),
+          u = Object(r["x"])("router-view"),
+          d = Object(r["x"])("Design"),
+          b = Object(r["x"])("Loading");
+      return Object(r["q"])(), Object(r["d"])("main", ve, [Object(r["g"])(c), Object(r["g"])("section", ye, ["Editor" !== e.$route.name ? (Object(r["q"])(), Object(r["d"])(i, {
+        key: 0
+      })) : Object(r["e"])("", !0), "Grid" === e.$route.name || "Editor" === e.$route.name || "Home" === e.$route.name ? (Object(r["q"])(), Object(r["d"])(l, {
+        key: 1
+      })) : Object(r["e"])("", !0), Object(r["g"])("section", we, [Object(r["g"])(u)]), Object(r["g"])(d, {
+        key: o.designComponent
+      })]), o.loading ? (Object(r["q"])(), Object(r["d"])(b, {
+        key: 0
+      })) : Object(r["e"])("", !0)]);
+    }
+
+    var Ie = {
+      id: "right-panel",
+      "class": "relative bg-gray-800 border-l border-gray-600 h-full w-64 flex flex-col overflow-hidden flex-shrink-0"
+    },
+        Ee = {
+      "class": "text-white text-lg font-medium tracking-wide flex justify-between items-center py-3 "
+    },
+        _e = {
+      "class": "flex items-center leading-5 py-px"
+    },
+        Ue = {
+      key: 0
+    },
+        Ce = {
+      key: 0,
+      "class": "my-4"
+    },
+        qe = {
+      "class": "text-white text-sm font-medium tracking-wide flex justify-between items-center py-1"
+    },
+        Ve = Object(r["g"])("option", {
+      value: "Yes"
+    }, "Yes", -1),
+        Le = Object(r["g"])("option", {
+      value: "No"
+    }, "No", -1),
+        Pe = {
+      key: 1,
+      "class": "my-4"
+    },
+        $e = {
+      "class": "text-white text-sm font-medium tracking-wide flex justify-between items-center py-1"
+    };
+
+    function Re(e, t, n, s, a, o) {
+      return Object(r["q"])(), Object(r["d"])("aside", Ie, [o.selectedDetail && o.selectedDetail.boundingBoxes && o.selectedDetail.boundingBoxes.length > 0 ? (Object(r["q"])(!0), Object(r["d"])(r["a"], {
+        key: 0
+      }, Object(r["w"])(o.selectedDetail.boundingBoxes, function (e, t) {
+        return Object(r["q"])(), Object(r["d"])("section", {
+          "class": "mx-5 w-full h-auto relative z-10 scrollbar text-none overflow-auto",
+          key: t
+        }, [Object(r["g"])("header", Ee, [Object(r["g"])("div", _e, Object(r["z"])(e.name), 1)]), Object(r["g"])("div", null, [Object(r["I"])(Object(r["g"])("select", {
+          "onUpdate:modelValue": function onUpdateModelValue(t) {
+            return e.selectedClass = t;
+          },
+          "class": "border rounded w-3/4 py-2 px-3 text-grey-darker border-0 relative self-center outline-none",
+          onChange: function onChange(t) {
+            return o.getAttributes(e);
+          }
+        }, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(o.selectedDetail.classDetails, function (e, t) {
+          return Object(r["q"])(), Object(r["d"])("option", {
+            key: t,
+            value: e.id
+          }, Object(r["z"])(e.class_name), 9, ["value"]);
+        }), 128))], 40, ["onUpdate:modelValue", "onChange"]), [[r["C"], e.selectedClass]])]), e && e.attributeValues ? (Object(r["q"])(), Object(r["d"])("div", Ue, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(e.attributeValues, function (e, t) {
+          return Object(r["q"])(), Object(r["d"])(r["a"], {
+            key: t
+          }, ["YesNo" === e.attribute_type ? (Object(r["q"])(), Object(r["d"])("div", Ce, [Object(r["g"])("div", qe, Object(r["z"])(e.attribute_name), 1), Object(r["I"])(Object(r["g"])("select", {
+            "onUpdate:modelValue": function onUpdateModelValue(t) {
+              return e.setValue = t;
+            },
+            "class": "border rounded w-3/4 py-2 px-3 text-grey-darker border-0 relative self-center outline-none"
+          }, [Ve, Le], 8, ["onUpdate:modelValue"]), [[r["C"], e.setValue]])])) : Object(r["e"])("", !0), "select" === e.attribute_type ? (Object(r["q"])(), Object(r["d"])("div", Pe, [Object(r["g"])("div", $e, Object(r["z"])(e.attribute_name), 1), Object(r["I"])(Object(r["g"])("select", {
+            "onUpdate:modelValue": function onUpdateModelValue(t) {
+              return e.setValue = t;
+            },
+            "class": "border rounded w-3/4 py-2 px-3 text-grey-darker border-0 relative self-center outline-none"
+          }, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(e.attribute_Values, function (e, t) {
+            return Object(r["q"])(), Object(r["d"])("option", {
+              key: t,
+              value: e
+            }, Object(r["z"])(e), 9, ["value"]);
+          }), 128))], 8, ["onUpdate:modelValue"]), [[r["C"], e.setValue]])])) : Object(r["e"])("", !0)], 64);
+        }), 128))])) : Object(r["e"])("", !0)]);
+      }), 128)) : Object(r["e"])("", !0)]);
+    }
+
+    n("7db0"), n("c740");
+    var Ae = {
+      watch: {
+        selectedDetail: {
+          immediate: !0,
+          deep: !0,
+          handler: function handler(e, t) {
+            console.log(e, t), this.selectedDetail = e;
+          }
+        }
+      },
+      computed: {
+        details: function details() {
+          return this.$store.state.selectedProject && this.$store.state.selectedProject.Details ? this.$store.state.selectedProject.Details : "";
+        },
+        selectedImage: function selectedImage() {
+          return this.$store.state.selectedImage;
+        },
+        selectedDetail: function selectedDetail() {
+          var e = this;
+          return Object.values(this.details).find(function (t) {
+            return t.image_Location === e.selectedImage;
+          });
+        },
+        selectedIndex: function selectedIndex() {
+          var e = this;
+          return Object.values(this.details).findIndex(function (t) {
+            return t.image_Location === e.selectedImage;
+          });
+        },
+        designComponent: function designComponent() {
+          return this.$store.state.designComponent;
+        },
+        appURI: function appURI() {
+          return this.$store.state.appURI;
+        }
+      },
+      methods: {
+        getAttributes: function getAttributes(e) {
+          var t = this;
+          return Object(O["a"])(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function n() {
+            var r;
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function (n) {
+              while (1) {
+                switch (n.prev = n.next) {
+                  case 0:
+                    return r = t, n.next = 3, t.axios.get(t.appURI + "api/getAttributes", {
+                      params: {
+                        class_id: e.selectedClass
+                      }
+                    }).then(function (e) {
+                      r.$store.commit("PUSH_ATTRIBUTE_VALUES", e.data);
+                    });
+
+                  case 3:
+                  case "end":
+                    return n.stop();
+                }
+              }
+            }, n);
+          }))();
+        }
+      }
+    };
+    Ae.render = Re;
+    var Ne = Ae,
+        Se = {
+      id: "right-panel",
+      "class": "relative bg-gray-800 border-l border-gray-600 h-full w-64 flex flex-col overflow-hidden flex-shrink-0"
+    },
+        De = {
+      key: 0,
+      "class": "rounded px-6"
+    },
+        ze = {
+      "class": "sticky top-0 z-50 border-l-4 border-red-400 -ml-6 pl-6 flex items-center justify-between py-4"
+    },
+        Te = Object(r["g"])("div", {
+      "class": "font-semibold text-white"
+    }, "Projects", -1),
+        Be = Object(r["g"])("hr", {
+      "class": "-mx-6"
+    }, null, -1),
+        He = {
+      "class": "flex-1 pl-2"
+    },
+        Fe = {
+      "class": "text-white font-semibold"
+    },
+        Me = Object(r["g"])("div", {
+      "class": "text-gray-600 font-thin"
+    }, null, -1),
+        Ye = Object(r["g"])("hr", {
+      "class": "boder-b-0 my-4"
+    }, null, -1);
+
+    function Ge(e, t, n, s, a, o) {
+      var c = Object(r["x"])("font-awesome-icon");
+      return Object(r["q"])(), Object(r["d"])("aside", Se, [o.projects && o.projects.length > 0 ? (Object(r["q"])(), Object(r["d"])("div", De, [Object(r["g"])("div", ze, [Te, Object(r["g"])("button", {
+        "class": "text-red-400 font-bold py-2 px-4 rounded inline-flex items-center",
+        onClick: t[1] || (t[1] = function (e) {
+          return o.goToCreate();
+        })
+      }, [Object(r["g"])(c, {
+        icon: "plus",
+        size: "1x"
+      })])]), Be, (Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(o.projects, function (e, t) {
+        return Object(r["q"])(), Object(r["d"])(r["a"], {
+          key: t
+        }, [Object(r["g"])("div", {
+          "class": "flex items-center justify-between my-4",
+          onClick: function onClick(t) {
+            return o.getAllFrames(e);
+          }
+        }, [Object(r["g"])("div", He, [Object(r["g"])("div", Fe, Object(r["z"])(e.project_name), 1), Me])], 8, ["onClick"]), Ye], 64);
+      }), 128))])) : Object(r["e"])("", !0)]);
+    }
+
+    var Xe = {
+      data: function data() {
+        return {
+          tableHeader: []
+        };
+      },
+      created: function created() {
+        var e = this;
+        this.axios.get(this.appURI + "api/getProjects").then(function (t) {
+          e.$store.state.mainProjects = t.data;
+        });
+      },
+      methods: {
+        getAllFrames: function getAllFrames(e) {
+          this.$store.state.selectedMainProject = e, this.$store.state.project_id = e.id, this.$router.push("/project");
+        },
+        goToCreate: function goToCreate() {
+          this.$router.push("/");
+        }
+      },
+      computed: {
+        projects: function projects() {
+          return this.$store.state.mainProjects;
+        },
+        appURI: function appURI() {
+          return this.$store.state.appURI;
+        }
+      }
+    };
+    Xe.render = Ge;
+    var Je = Xe,
+        Ke = {
+      id: "right-panel",
+      "class": "relative bg-gray-800 border-l border-gray-600 h-full w-64 flex flex-col overflow-hidden flex-shrink-0"
+    },
+        Ze = {
+      "class": "rounded px-6"
+    },
+        We = {
+      "class": "sticky top-0 z-50 border-l-4 border-red-400 -ml-6 pl-6 flex items-center justify-between py-4"
+    },
+        Qe = Object(r["g"])("div", {
+      "class": "font-semibold text-white"
+    }, "Videos", -1),
+        et = Object(r["g"])("hr", {
+      "class": "-mx-6"
+    }, null, -1),
+        tt = {
+      "class": "flex-1 pl-2"
+    },
+        nt = {
+      "class": "text-white font-semibold"
+    },
+        rt = Object(r["g"])("div", {
+      "class": "text-gray-600 font-thin"
+    }, null, -1),
+        st = Object(r["g"])("hr", {
+      "class": "boder-b-0 my-4"
+    }, null, -1);
+
+    function at(e, t, n, s, a, o) {
+      var c = Object(r["x"])("font-awesome-icon");
+      return Object(r["q"])(), Object(r["d"])("aside", Ke, [Object(r["g"])("div", Ze, [Object(r["g"])("div", We, [Qe, Object(r["g"])("button", {
+        "class": "text-red-400 font-bold py-2 px-4 rounded inline-flex items-center",
+        onClick: t[1] || (t[1] = function (e) {
+          return o.goToUpload();
+        })
+      }, [Object(r["g"])(c, {
+        icon: "plus",
+        size: "1x"
+      })])]), et, o.projects && o.projects.length > 0 ? (Object(r["q"])(), Object(r["d"])(r["a"], {
+        key: 0
+      }, [(Object(r["q"])(!0), Object(r["d"])(r["a"], null, Object(r["w"])(o.projects, function (e, t) {
+        return Object(r["q"])(), Object(r["d"])("div", {
+          "class": "flex items-center justify-between my-4",
+          onClick: function onClick(t) {
+            return o.getAllFrames(e);
+          },
+          key: t
+        }, [Object(r["g"])("div", tt, [Object(r["g"])("div", nt, Object(r["z"])(e.project_name), 1), rt])], 8, ["onClick"]);
+      }), 128)), st], 64)) : Object(r["e"])("", !0)])]);
+    }
+
+    var ot = {
+      data: function data() {
+        return {
+          tableHeader: []
+        };
+      },
+      created: function created() {
+        var e = this;
+        this.axios.get(this.appURI + "api/getVideos", {
+          params: {
+            project_id: this.$store.state.project_id
+          }
+        }).then(function (t) {
+          e.$store.state.projects = t.data;
+        });
+      },
+      methods: {
+        getAllFrames: function getAllFrames(e) {
+          this.$store.state.selectedProject = e, this.$router.push("/project");
+        },
+        goToUpload: function goToUpload() {
+          this.$router.push("/upload");
+        }
+      },
+      computed: {
+        projects: function projects() {
+          return this.$store.state.projects;
+        },
+        appURI: function appURI() {
+          return this.$store.state.appURI;
+        }
+      }
+    };
+    ot.render = at;
+    var ct = ot,
+        it = {
+      "class": "flex flex-wrap"
+    },
+        lt = {
+      "class": "w-full"
+    },
+        ut = {
+      "class": "relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-900"
+    },
+        dt = {
+      "class": "container flex flex-wrap items-center justify-between"
+    },
+        bt = {
+      "class": "w-full relative flex justify-between lg:w-auto px-4 lg:static lg:block lg:justify-start"
+    },
+        pt = Object(r["g"])("a", {
+      href: "/",
+      "class": "p-3 h-full flex items-center group border-r border-gray-600"
+    }, [Object(r["g"])("img", {
+      src: "https://drill-d.co.il/wp-content/uploads/2020/06/Big-Logo.d110a0.webp",
+      "class": "h-10"
+    })], -1),
+        gt = Object(r["g"])("i", {
+      "class": "fas fa-bars"
+    }, null, -1),
+        mt = {
+      "class": "lg:flex lg:flex-grow items-center"
+    },
+        ft = {
+      "class": "flex flex-col lg:flex-row list-none"
+    },
+        jt = {
+      "class": "nav-item"
+    },
+        Ot = Object(r["f"])("Projects"),
+        ht = Object(r["g"])("li", {
+      "class": "nav-item"
+    }, [Object(r["g"])("a", {
+      "class": "px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75",
+      href: "#pablo"
+    }, " Profile ")], -1),
+        xt = Object(r["g"])("li", {
+      "class": "nav-item"
+    }, [Object(r["g"])("a", {
+      "class": "px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75",
+      href: "#pablo"
+    }, " Settings ")], -1),
+        vt = {
+      "class": "nav-item"
+    },
+        yt = Object(r["f"])("Add Users");
+
+    function wt(e, t, n, s, a, o) {
+      var c = Object(r["x"])("router-link");
+      return Object(r["q"])(), Object(r["d"])("div", it, [Object(r["g"])("div", lt, [Object(r["g"])("nav", ut, [Object(r["g"])("div", dt, [Object(r["g"])("div", bt, [pt, Object(r["g"])("button", {
+        "class": "text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none",
+        type: "button",
+        onClick: t[1] || (t[1] = function (t) {
+          return e.toggleNavbar();
+        })
+      }, [gt])]), Object(r["g"])("div", mt, [Object(r["g"])("ul", ft, [Object(r["g"])("li", jt, [Object(r["g"])(c, {
+        "class": "px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75",
+        to: "/dashboard"
+      }, {
+        "default": Object(r["H"])(function () {
+          return [Ot];
+        }),
+        _: 1
+      })]), ht, xt, Object(r["g"])("li", vt, [Object(r["g"])(c, {
+        "class": "px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75",
+        to: "/create-user"
+      }, {
+        "default": Object(r["H"])(function () {
+          return [yt];
+        }),
+        _: 1
+      })])])])]), Object(r["g"])("button", {
+        "class": "bg-transparent px-6 text-white font-bold cursor-pointer",
+        onClick: t[2] || (t[2] = function () {
+          return o.Logout && o.Logout.apply(o, arguments);
+        })
+      }, "Logout")])])]);
+    }
+
+    var kt = n("bc3a"),
+        It = n.n(kt),
+        Et = {
+      methods: {
+        Logout: function Logout() {
+          var e = this;
+          It.a.post("/api/users/logout").then(function () {
+            localStorage.removeItem("user_token"), localStorage.removeItem("id"), localStorage.removeItem("name"), localStorage.removeItem("user_role"), e.$router.push("/");
+          })["catch"](function (e) {
+            console.log(e);
+          });
+        }
+      }
+    };
+    Et.render = wt;
+    var _t = Et,
+        Ut = {
+      "class": "flex w-full h-full fixed block h-screen text-center bg-white opacity-75 z-50"
+    },
+        Ct = Object(r["g"])("div", {
+      "class": "flex justify-around m-auto"
+    }, [Object(r["g"])("span", {
+      "class": "inline-flex rounded-md shadow-sm"
+    }, [Object(r["g"])("button", {
+      type: "button",
+      "class": "inline-flex items-center px-4 py-2 border border-transparent text-base text-xl leading-6 font-medium rounded-md text-gray-700 transition ease-in-out duration-150 cursor-not-allowed",
+      disabled: ""
+    }, [Object(r["g"])("svg", {
+      "class": "animate-spin -ml-1 mr-3 h-8 w-8 text-gray-700",
+      xmlns: "http://www.w3.org/2000/svg",
+      fill: "none",
+      viewBox: "0 0 24 24"
+    }, [Object(r["g"])("circle", {
+      "class": "opacity-25",
+      cx: "12",
+      cy: "12",
+      r: "10",
+      stroke: "currentColor",
+      "stroke-width": "4"
+    }), Object(r["g"])("path", {
+      "class": "opacity-75",
+      fill: "currentColor",
+      d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+    })]), Object(r["f"])(" Processing ")])])], -1);
+
+    function qt(e, t) {
+      return Object(r["q"])(), Object(r["d"])("div", Ut, [Ct]);
+    }
+
+    var Vt = {};
+    Vt.render = qt;
+    var Lt = Vt,
+        Pt = {
+      name: "App",
+      components: {
+        Design: Ne,
+        NavBar: _t,
+        Layers: Je,
+        Loading: Lt,
+        Videos: ct
+      },
+      computed: {
+        designComponent: function designComponent() {
+          return this.$store.state.designComponent;
+        },
+        loading: function loading() {
+          return this.$store.state.loading;
+        }
+      }
+    };
+    Pt.render = ke;
+    var $t = Pt,
+        Rt = n("dd45"),
+        At = n.n(Rt),
+        Nt = Object(r["K"])("data-v-21e1a525");
+    Object(r["t"])("data-v-21e1a525");
+    var St = {
+      "class": "login_page"
+    },
+        Dt = {
+      "class": "w-full h-screen flex items-center justify-center login_full_scrn"
+    },
+        zt = {
+      "class": "\r\n          bg-white\r\n          w-6/12\r\n          flex\r\n          items-center\r\n          justify-center\r\n          rounded\r\n          px-16\r\n          pt-16\r\n          pb-16\r\n          mb-4\r\n        "
+    },
+        Tt = Object(r["g"])("div", {
+      "class": "w-1/2"
+    }, [Object(r["g"])("img", {
+      src: At.a,
+      alt: ""
+    })], -1),
+        Bt = {
+      "class": "form_box w-1/2 px-10 pb-16 pt-8 border-l-2 border-gainsboro"
+    },
+        Ht = {
+      "class": "err_box h-12"
+    },
+        Ft = {
+      key: 0,
+      "class": "error py-3 text-red-500"
+    },
+        Mt = {
+      "class": "mb-4"
+    },
+        Yt = Object(r["g"])("label", {
+      "class": "block text-gray-700 text-sm font-bold mb-2",
+      "for": "username"
+    }, " Username ", -1),
+        Gt = {
+      "class": "mb-6"
+    },
+        Xt = Object(r["g"])("label", {
+      "class": "block text-gray-700 text-sm font-bold mb-2",
+      "for": "password"
+    }, " Password ", -1),
+        Jt = {
+      "class": "flex items-center justify-between"
+    },
+        Kt = Object(r["g"])("a", {
+      "class": "\r\n                inline-block\r\n                align-baseline\r\n                font-bold\r\n                text-sm text-blue-500\r\n                hover:text-blue-800\r\n              ",
+      href: "#"
+    }, " Forgot Password? ", -1);
+    Object(r["r"])();
+    var Zt = Nt(function (e, t, n, s, a, o) {
+      return Object(r["q"])(), Object(r["d"])("div", St, [Object(r["g"])("div", Dt, [Object(r["g"])("form", zt, [Tt, Object(r["g"])("div", Bt, [Object(r["g"])("div", Ht, [1 == a.error ? (Object(r["q"])(), Object(r["d"])("div", Ft, "Invalid Credentials")) : Object(r["e"])("", !0)]), Object(r["g"])("div", Mt, [Yt, Object(r["I"])(Object(r["g"])("input", {
+        "class": "\r\n                shadow\r\n                appearance-none\r\n                border\r\n                rounded\r\n                w-full\r\n                py-2\r\n                px-3\r\n                text-gray-700\r\n                leading-tight\r\n                focus:outline-none\r\n                focus:shadow-outline\r\n              ",
+        id: "username",
+        type: "text",
+        placeholder: "Username",
+        "onUpdate:modelValue": t[1] || (t[1] = function (e) {
+          return a.email = e;
+        })
+      }, null, 512), [[r["D"], a.email]])]), Object(r["g"])("div", Gt, [Xt, Object(r["I"])(Object(r["g"])("input", {
+        "class": "\r\n                shadow\r\n                appearance-none\r\n                border\r\n                rounded\r\n                w-full\r\n                py-2\r\n                px-3\r\n                text-gray-700\r\n                leading-tight\r\n                focus:outline-none\r\n                focus:shadow-outline\r\n              ",
+        id: "password",
+        type: "password",
+        placeholder: "Password",
+        "onUpdate:modelValue": t[2] || (t[2] = function (e) {
+          return a.password = e;
+        })
+      }, null, 512), [[r["D"], a.password]])]), Object(r["g"])("div", Jt, [Object(r["g"])("button", {
+        "class": "\r\n                bg-blue-500\r\n                hover:bg-blue-700\r\n                text-white\r\n                font-bold\r\n                py-2\r\n                px-4\r\n                rounded\r\n                focus:outline-none\r\n                focus:shadow-outline\r\n                login_btn\r\n              ",
+        type: "button",
+        onClick: t[3] || (t[3] = function () {
+          return o.Login && o.Login.apply(o, arguments);
+        })
+      }, " Sign In "), Kt])])])])]);
     }),
-        Be = De,
-        He = n("5502"),
-        Ye = Object(He["a"])({
+        Wt = {
+      data: function data() {
+        return {
+          email: "",
+          password: "",
+          error: !1
+        };
+      },
+      methods: {
+        Login: function Login() {
+          var e = this,
+              t = document.querySelector(".login_btn");
+          t.innerHTML = "Loading", It.a.post("api/users/login", {
+            email: this.email,
+            password: this.password
+          }).then(function (n) {
+            var r = n.data.token,
+                s = n.data.user.id,
+                a = n.data.user.name,
+                o = n.data.user.user_role;
+            localStorage.setItem("user_token", r), localStorage.setItem("id", s), localStorage.setItem("name", a), localStorage.setItem("user_role", o), "" !== r && e.$router.push("/dashboard"), t.innerHTML = "Sign In";
+          })["catch"](function (n) {
+            console.log(n), e.error = !0, t.innerHTML = "Sign In";
+          });
+        }
+      }
+    };
+    n("5dbd");
+    Wt.render = Zt, Wt.__scopeId = "data-v-21e1a525";
+    var Qt = Wt,
+        en = {
+      "class": "w-2/5 mt-40 mx-auto login_full_scrn"
+    },
+        tn = {
+      "class": "bg-white rounded mb-4"
+    },
+        nn = {
+      "class": "form_box"
+    },
+        rn = {
+      "class": "err_box h-12"
+    },
+        sn = {
+      key: 0,
+      "class": "success py-3 text-green-500"
+    },
+        an = {
+      key: 1,
+      "class": "error py-3 text-red-500"
+    },
+        on = {
+      key: 2,
+      "class": "error py-3 text-red-500"
+    },
+        cn = {
+      "class": "mb-4"
+    },
+        ln = Object(r["g"])("label", {
+      "class": "block text-gray-700 text-sm font-bold mb-2",
+      "for": "name"
+    }, " Your Name ", -1),
+        un = {
+      "class": "mb-4"
+    },
+        dn = Object(r["g"])("label", {
+      "class": "block text-gray-700 text-sm font-bold mb-2",
+      "for": "userrole"
+    }, " User Role ", -1),
+        bn = {
+      "class": "mb-4"
+    },
+        pn = Object(r["g"])("label", {
+      "class": "block text-gray-700 text-sm font-bold mb-2",
+      "for": "username"
+    }, " Email ", -1),
+        gn = {
+      "class": "mb-12"
+    },
+        mn = Object(r["g"])("label", {
+      "class": "block text-gray-700 text-sm font-bold mb-2",
+      "for": "password"
+    }, " Password ", -1),
+        fn = {
+      "class": "flex items-center justify-between"
+    };
+
+    function jn(e, t, n, s, a, o) {
+      return Object(r["q"])(), Object(r["d"])("div", null, [Object(r["g"])("div", en, [Object(r["g"])("form", tn, [Object(r["g"])("div", nn, [Object(r["g"])("div", rn, [1 == a.success ? (Object(r["q"])(), Object(r["d"])("div", sn, " Added Successfully ")) : Object(r["e"])("", !0), 1 == a.empty_valid ? (Object(r["q"])(), Object(r["d"])("div", an, " Values should not be empty ")) : Object(r["e"])("", !0), 1 == a.email_valid ? (Object(r["q"])(), Object(r["d"])("div", on, " Enter a valid Email ")) : Object(r["e"])("", !0)]), Object(r["g"])("div", cn, [ln, Object(r["I"])(Object(r["g"])("input", {
+        "class": "\r\n                shadow\r\n                appearance-none\r\n                border\r\n                rounded\r\n                w-full\r\n                py-2\r\n                px-3\r\n                text-gray-700\r\n                leading-tight\r\n                focus:outline-none\r\n                focus:shadow-outline\r\n              ",
+        id: "name",
+        type: "text",
+        placeholder: "Your Name",
+        "onUpdate:modelValue": t[1] || (t[1] = function (e) {
+          return a.name = e;
+        })
+      }, null, 512), [[r["D"], a.name]])]), Object(r["g"])("div", un, [dn, Object(r["I"])(Object(r["g"])("input", {
+        "class": "\r\n                shadow\r\n                appearance-none\r\n                border\r\n                rounded\r\n                w-full\r\n                py-2\r\n                px-3\r\n                text-gray-700\r\n                leading-tight\r\n                focus:outline-none\r\n                focus:shadow-outline\r\n              ",
+        id: "userrole",
+        type: "text",
+        placeholder: "User Role",
+        "onUpdate:modelValue": t[2] || (t[2] = function (e) {
+          return a.userRole = e;
+        })
+      }, null, 512), [[r["D"], a.userRole]])]), Object(r["g"])("div", bn, [pn, Object(r["I"])(Object(r["g"])("input", {
+        "class": "\r\n                shadow\r\n                appearance-none\r\n                border\r\n                rounded\r\n                w-full\r\n                py-2\r\n                px-3\r\n                text-gray-700\r\n                leading-tight\r\n                focus:outline-none\r\n                focus:shadow-outline\r\n              ",
+        id: "username",
+        type: "email",
+        placeholder: "Email",
+        "onUpdate:modelValue": t[3] || (t[3] = function (e) {
+          return a.email = e;
+        })
+      }, null, 512), [[r["D"], a.email]])]), Object(r["g"])("div", gn, [mn, Object(r["I"])(Object(r["g"])("input", {
+        "class": "\r\n                shadow\r\n                appearance-none\r\n                border\r\n                rounded\r\n                w-full\r\n                py-2\r\n                px-3\r\n                text-gray-700\r\n                leading-tight\r\n                focus:outline-none\r\n                focus:shadow-outline\r\n              ",
+        id: "password",
+        type: "password",
+        placeholder: "Password",
+        "onUpdate:modelValue": t[4] || (t[4] = function (e) {
+          return a.password = e;
+        })
+      }, null, 512), [[r["D"], a.password]])]), Object(r["g"])("div", fn, [Object(r["g"])("button", {
+        "class": "\r\n                bg-blue-500\r\n                hover:bg-blue-700\r\n                text-white\r\n                font-bold\r\n                w-full\r\n                py-2\r\n                px-4\r\n                rounded\r\n                focus:outline-none\r\n                focus:shadow-outline\r\n                reg_btn\r\n              ",
+        type: "button",
+        onClick: t[5] || (t[5] = function () {
+          return o.AddUser && o.AddUser.apply(o, arguments);
+        })
+      }, " Add User ")])])])])]);
+    }
+
+    var On = {
+      data: function data() {
+        return {
+          email: "",
+          password: "",
+          userRole: "",
+          name: "",
+          success: !1,
+          empty_valid: !1,
+          email_valid: !1
+        };
+      },
+      methods: {
+        AddUser: function AddUser() {
+          var e = this,
+              t = document.querySelector(".reg_btn");
+          t.innerHTML = "Loading";
+          var n = 0,
+              r = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          "" === this.email || "" === this.password || "" === this.userRole || "" === this.name ? (n++, this.empty_valid = !0, this.email_valid = !1, t.innerHTML = "Add User") : (this.empty_valid = !1, r.test(this.email) || (n++, this.email_valid = !0, t.innerHTML = "Add User")), 0 === n && (this.empty_valid = !1, this.email_valid = !1, It.a.post("/api/users/register", {
+            email: this.email,
+            password: this.password,
+            user_role: this.userRole,
+            name: this.name,
+            password_confirmation: this.password
+          }).then(function (n) {
+            console.log(n), e.success = !0, t.innerHTML = "Add User";
+          })["catch"](function (e) {
+            console.log(e), t.innerHTML = "Add User";
+          }));
+        }
+      }
+    };
+    On.render = jn;
+    var hn = On,
+        xn = [{
+      path: "/",
+      name: "Login",
+      component: Qt
+    }, {
+      path: "/dashboard",
+      name: "Dashboard",
+      component: $t,
+      children: [{
+        path: "/dashboard",
+        name: "Project",
+        component: ne
+      }, {
+        path: "/create-user",
+        name: "CreateUser",
+        component: hn
+      }, {
+        path: "/upload",
+        name: "Home",
+        component: x
+      }, {
+        path: "/project",
+        name: "Grid",
+        component: le
+      }, {
+        path: "/editor",
+        name: "Editor",
+        component: xe
+      }]
+    }],
+        vn = Object(c["a"])({
+      history: Object(c["b"])("/"),
+      routes: xn
+    });
+    vn.beforeEach(function (e, t, n) {
+      var r = ["/"],
+          s = !r.includes(e.path);
+      if (s && !localStorage.getItem("user_token")) return n("/");
+      n();
+    });
+
+    var yn = vn,
+        wn = (n("ac1f"), n("1276"), n("5502")),
+        kn = Object(wn["a"])({
       state: {
         galleries: [],
         loading: !1,
+        project_id: "",
+        mainProjects: [],
+        selectedMainProject: {},
         projects: [],
         selectedProject: {},
         selectedImage: 0,
+        designComponent: 0,
+        bboxComponent: 0,
         appURI: ""
       },
       mutations: {
         GET_GALLERIES: function GET_GALLERIES(e, t) {
           e.galleries = t.galArray, e.loading = !1;
+        },
+        PUSH_BOUNDING_BOX: function PUSH_BOUNDING_BOX(e, t) {
+          e.selectedProject.Details.forEach(function (n) {
+            n.image_Location === e.selectedImage && (n.boundingBoxes = t);
+          });
+        },
+        PUSH_ATTRIBUTE_VALUES: function PUSH_ATTRIBUTE_VALUES(e, t) {
+          e.selectedProject.Details.forEach(function (n) {
+            n.image_Location === e.selectedImage && n.boundingBoxes.forEach(function (e) {
+              e && 0 === e.attributeValues.length && "" !== e.selectedClass && (t.forEach(function (e) {
+                e && e.attribute_Values && (e.attribute_Values = e.attribute_Values.split(","));
+              }), e.attributeValues = t);
+            });
+          });
         }
       },
       actions: {},
       modules: {}
     }),
-        Xe = n("ecee"),
-        Je = n("c074"),
-        We = n("ad3d"),
-        Ke = n("bc3a"),
-        Qe = n.n(Ke),
-        Ze = n("2106"),
-        et = n.n(Ze);
-    Xe["c"].add(Je["f"], Je["a"], Je["b"], Je["e"], Je["d"], Je["c"]);
-    var tt = Object(r["c"])(z);
-    tt.component("font-awesome-icon", We["a"]), tt.config.productionTip = !1, tt.use(Ye).use(Be).use(et.a, Qe.a).mount("#app"), console.log(Object({
+        In = n("ecee"),
+        En = n("c074"),
+        _n = n("ad3d"),
+        Un = n("2106"),
+        Cn = n.n(Un);
+
+    In["c"].add(En["f"], En["a"], En["b"], En["e"], En["d"], En["c"]);
+    var qn = Object(r["c"])(o);
+    qn.component("font-awesome-icon", _n["a"]), qn.config.productionTip = !1, qn.use(kn).use(yn).use(Cn.a, It.a).mount("#app"), console.log(Object({
       NODE_ENV: "production",
       VUE_APP_API_URI_PREFIX: "",
       VUE_APP_THEME: "theme2",
@@ -1173,7 +1948,16 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       BASE_URL: "/"
     }));
   },
-  a2f0: function a2f0(e, t, n) {}
+  "5dbd": function dbd(e, t, n) {
+    "use strict";
+
+    n("f07f");
+  },
+  a2f0: function a2f0(e, t, n) {},
+  dd45: function dd45(e, t, n) {
+    e.exports = n.p + "img/hello.f7b2eaa4.png";
+  },
+  f07f: function f07f(e, t, n) {}
 });
 
 /***/ }),
