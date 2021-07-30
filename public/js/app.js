@@ -1548,7 +1548,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       methods: {
         Logout: function Logout() {
           var e = this;
-          It.a.post("/api/users/logout").then(function () {
+          It.a.post("api/users/logout").then(function () {
             localStorage.removeItem("user_token"), localStorage.removeItem("id"), localStorage.removeItem("name"), localStorage.removeItem("user_role"), e.$router.push("/");
           })["catch"](function (e) {
             console.log(e);
@@ -1616,13 +1616,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     var $t = Pt,
         Rt = n("dd45"),
         At = n.n(Rt),
-        Nt = Object(r["K"])("data-v-21e1a525");
-    Object(r["t"])("data-v-21e1a525");
+        Nt = Object(r["K"])("data-v-0765108e");
+    Object(r["t"])("data-v-0765108e");
     var St = {
       "class": "login_page"
     },
         Dt = {
-      "class": "w-full h-screen flex items-center justify-center login_full_scrn"
+      "class": "w-full h-screen flex items-center justify-center login_full_scrn bg-gray-900"
     },
         zt = {
       "class": "\r\n          bg-white\r\n          w-6/12\r\n          flex\r\n          items-center\r\n          justify-center\r\n          rounded\r\n          px-16\r\n          pt-16\r\n          pb-16\r\n          mb-4\r\n        "
@@ -1717,8 +1717,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
       }
     };
-    n("5dbd");
-    Wt.render = Zt, Wt.__scopeId = "data-v-21e1a525";
+    n("cbfc");
+    Wt.render = Zt, Wt.__scopeId = "data-v-0765108e";
     var Qt = Wt,
         en = {
       "class": "w-2/5 mt-40 mx-auto login_full_scrn"
@@ -1948,16 +1948,16 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       BASE_URL: "/"
     }));
   },
-  "5dbd": function dbd(e, t, n) {
+  a2f0: function a2f0(e, t, n) {},
+  cbfc: function cbfc(e, t, n) {
     "use strict";
 
-    n("f07f");
+    n("cc41");
   },
-  a2f0: function a2f0(e, t, n) {},
+  cc41: function cc41(e, t, n) {},
   dd45: function dd45(e, t, n) {
     e.exports = n.p + "img/hello.f7b2eaa4.png";
-  },
-  f07f: function f07f(e, t, n) {}
+  }
 });
 
 /***/ }),
