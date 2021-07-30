@@ -5,7 +5,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 use Laravel\Passport\RefreshToken;
 use Laravel\Passport\Token;
 
@@ -20,11 +19,12 @@ class UserController extends Controller
             'user_role' => 'required|max:255',
         ]);
 
-        $data['password'] = bcrypt($request->password);
+        $data['password'] = md5($request->password);
 
         $user = User::create($data);
 
         $token = $user->createToken('API Token')->accessToken;
+
 
         return response([ 'user' => $user, 'token' => $token]);
     }
@@ -77,9 +77,8 @@ class UserController extends Controller
         }
 
         public function logout(Request $request){
-            $user=Auth::user()->token();
+            // $user=Auth::user()->token();
             // $user->revoke();
-
-            return response(['message'=>$user]);
+            return response(['message'=>'Logged out successfully']);
         }
 }
