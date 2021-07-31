@@ -20,8 +20,9 @@ class VideoController extends Controller
         $Details=array();
         foreach($videos as $video) {
             $details=array();
-            foreach(Storage::disk('publicUploads')->allFiles($video->image_Location) as $file) {
-                $obj=array('boundingBoxes'=>array(), 'classDetails'=>$classDetails, 'image_Location'=>$file);
+            foreach(Storage::disk('publicUploads')->allFiles($video->image_Location.'/original') as $file) {
+                $thumbfile = str_replace('original','thumbs',$file);
+                $obj=array('boundingBoxes'=>array(), 'classDetails'=>$classDetails, 'thumb_image_Location'=>$thumbfile, 'image_Location'=>$file);
                 array_push($details, $obj);
             }
             $temp=array("id"=>$video->id, "project_name"=>$video->project_name, "image_Location"=>$video->image_Location, "Details"=>$details );

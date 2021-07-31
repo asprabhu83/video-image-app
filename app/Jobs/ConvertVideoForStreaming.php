@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 use FFMpeg;
+use FFMpeg\Filters\Frame\FrameFilters;
 use App\Models\Video;
 use Carbon\Carbon;
 use FFMpeg\Coordinate\Dimension;
@@ -47,16 +48,29 @@ class ConvertVideoForStreaming implements ShouldQueue
         );
         $diskName = Storage::build([
             'driver' => 'local',
-            'root' => public_path('uploads/' . $this->video->image_Location),
+            'root' => public_path('uploads/' . $this->video->image_Location.'/original'),
+        ]);
+        $thumbdiskName = Storage::build([
+            'driver' => 'local',
+            'root' => public_path('uploads/' . $this->video->image_Location.'/thumbs'),
         ]);
         $fps = $this->video->fps;
         for ($secs = 0; $secs <= $durationInSeconds; $secs++) {
             if($fps > 1){
                 for($f = 1; $f <= $fps; $f++){
                     $newsec = $secs+(($fps/100)*$f);
+
                     $media = $media ->getFrameFromSeconds($newsec)
                     ->export()
                     ->toDisk($diskName)
+                    ->save("thumb_{$secs}_{$f}.jpg");
+
+                    $media = $media ->getFrameFromSeconds($newsec)                    
+                    ->export()
+                    ->addFilter(function (FrameFilters $filters) {
+						$filters->custom('scale=224:126');
+					})
+                    ->toDisk($thumbdiskName)                    
                     ->save("thumb_{$secs}_{$f}.jpg");
                 }
                 
@@ -64,7 +78,16 @@ class ConvertVideoForStreaming implements ShouldQueue
                 $media = $media ->getFrameFromSeconds($secs)
                 ->export()
                 ->toDisk($diskName)
-                ->save("thumb_{$secs}.jpg");                
+                ->save("thumb_{$secs}.jpg");
+
+                $media = $media ->getFrameFromSeconds($secs)
+                ->export()
+                ->addFilter(function (FrameFilters $filters) {
+					$filters->custom('scale=224:126');
+				})
+                ->toDisk($thumbdiskName)
+                ->save("thumb_{$secs}.jpg");              
+                     
             }
             
           }
