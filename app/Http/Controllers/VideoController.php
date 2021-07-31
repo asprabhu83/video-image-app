@@ -53,7 +53,8 @@ class VideoController extends Controller
             'disk'          => 'public',
             'image_Location' => $current_timestamp,
             'file_name'      => $request->video->getClientOriginalName(),
-            'project_name'   => $request->title
+            'project_name'   => $request->title,
+            'fps'   => $request->fps,
         ]);
         ConvertVideoForStreaming::dispatch($video);
         $video->save();

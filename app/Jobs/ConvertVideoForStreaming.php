@@ -49,11 +49,24 @@ class ConvertVideoForStreaming implements ShouldQueue
             'driver' => 'local',
             'root' => public_path('uploads/' . $this->video->image_Location),
         ]);
+        $fps = $this->video->fps;
         for ($secs = 0; $secs <= $durationInSeconds; $secs++) {
-            $media = $media ->getFrameFromSeconds($secs)
+            if($fps > 1){
+                for($f = 1; $f <= $fps; $f++){
+                    $newsec = $secs+(($fps/100)*$f);
+                    $media = $media ->getFrameFromSeconds($newsec)
+                    ->export()
+                    ->toDisk($diskName)
+                    ->save("thumb_{$secs}_{$f}.jpg");
+                }
+                
+            }else{
+                $media = $media ->getFrameFromSeconds($secs)
                 ->export()
                 ->toDisk($diskName)
-                ->save("thumb_{$secs}.jpg");
+                ->save("thumb_{$secs}.jpg");                
+            }
+            
           }
           
     }
