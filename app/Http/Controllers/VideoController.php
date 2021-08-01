@@ -67,7 +67,7 @@ class VideoController extends Controller
     }
 
     public function createThumbs(Request $request){
-        $videos = Video::where('project_id', $request->project_id)->get();        
+        $videos = Video::where('id', $request->video_id)->get();        
         foreach($videos as $video) {
             $thumbdiskName = Storage::build([
                 'driver' => 'local',
