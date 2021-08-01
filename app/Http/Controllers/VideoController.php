@@ -21,10 +21,18 @@ class VideoController extends Controller
         $Details=array();
         foreach($videos as $video) {
             $details=array();
-            foreach(Storage::disk('publicUploads')->allFiles($video->image_Location.'/original') as $file) {
-                $thumbfile = str_replace('original','thumbs',$file);
-                $obj=array('boundingBoxes'=>array(), 'classDetails'=>$classDetails, 'thumb_image_Location'=>$thumbfile, 'image_Location'=>$file);
-                array_push($details, $obj);
+            $durationInSeconds = $video->video_duration;
+            $fps = $video->fps;
+            for ($secs = 0; $secs <= $durationInSeconds; $secs++) {
+                if($fps > 1){
+                    for($f = 1; $f <= $fps; $f++){
+                        $obj=array('boundingBoxes'=>array(), 'classDetails'=>$classDetails, 'thumb_image_Location'=> $video->image_Location."/thumbs/thumb_{$secs}_{$f}.jpg", 'image_Location'=> $video->image_Location."/original/thumb_{$secs}_{$f}.jpg");
+                        array_push($details, $obj);
+                    }
+                }else{
+                    $obj=array('boundingBoxes'=>array(), 'classDetails'=>$classDetails, 'thumb_image_Location'=> $video->image_Location."/thumbs/thumb_{$secs}.jpg", 'image_Location'=> $video->image_Location."/original/thumb_{$secs}.jpg");
+                    array_push($details, $obj);      
+                }
             }
             $temp=array("id"=>$video->id, "project_name"=>$video->project_name, "image_Location"=>$video->image_Location, "Details"=>$details );
             array_push($Details, $temp);
@@ -77,7 +85,7 @@ class VideoController extends Controller
             foreach(Storage::disk('publicUploads')->allFiles($video->image_Location.'/original') as $image) {      
                 echo $image;          
                 $thumbfile = str_replace('original','thumbs',$image);
-                Image::make(public_path() . $image)->resize(224,126)->save($thumbfile);                
+                Image::make(public_path('uploads/' . $image))->resize(224,126)->save(public_path('uploads/' . $thumbfile));                
             }
         }
     }
