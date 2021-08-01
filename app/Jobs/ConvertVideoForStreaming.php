@@ -64,30 +64,12 @@ class ConvertVideoForStreaming implements ShouldQueue
                     ->export()
                     ->toDisk($diskName)
                     ->save("thumb_{$secs}_{$f}.jpg");
-
-                    $media = $media ->getFrameFromSeconds($newsec)                    
-                    ->export()
-                    ->addFilter(function (FrameFilters $filters) {
-						$filters->custom('scale=224:126');
-					})
-                    ->toDisk($thumbdiskName)                    
-                    ->save("thumb_{$secs}_{$f}.jpg");
                 }
-                
             }else{
                 $media = $media ->getFrameFromSeconds($secs)
                 ->export()
                 ->toDisk($diskName)
-                ->save("thumb_{$secs}.jpg");
-
-                $media = $media ->getFrameFromSeconds($secs)
-                ->export()
-                ->addFilter(function (FrameFilters $filters) {
-					$filters->custom('scale=224:126');
-				})
-                ->toDisk($thumbdiskName)
-                ->save("thumb_{$secs}.jpg");              
-                     
+                ->save("thumb_{$secs}.jpg");         
             }
             
           }

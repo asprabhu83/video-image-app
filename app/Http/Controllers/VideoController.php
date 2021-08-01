@@ -64,4 +64,19 @@ class VideoController extends Controller
             "message" => "File successfully uploaded"
         ]);
     }
+
+    public function createThumbs(Request $request){
+        $videos = Video::where('project_id', $request->project_id)->get();
+        $thumbdiskName = Storage::build([
+            'driver' => 'local',
+            'root' => public_path('uploads/' . $this->video->image_Location.'/thumbs'),
+        ]);
+        foreach($videos as $video) {
+            foreach(Storage::disk('publicUploads')->allFiles($video->image_Location.'/original') as $image) {                
+                $imageName = $image->getClientOriginalName();
+                $fileName =  $thumbdiskName . $imageName;
+                Image::make($image)->resize(224,126)->save($fileName);                
+            }
+        }
+    }
 }

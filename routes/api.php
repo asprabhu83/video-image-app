@@ -21,6 +21,7 @@ Route::get('getVideos',  [VideoController::class, 'index']);
 Route::get('getClasses',  [ClassDetailsController::class, 'index']);
 Route::get('getAttributes',  [AttributeDetailsController::class, 'index']);
 Route::post('upload',  [VideoController::class, 'store']);
+Route::post('create-thumbs',  [VideoController::class, 'createThumbs']);
 Route::post('createProject',  [ProjectsController::class, 'store']);
 Route::post('createClass',  [ClassDetailsController::class, 'store']);
 Route::post('createAttribute',  [AttributeDetailsController::class, 'store']);
