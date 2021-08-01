@@ -76,7 +76,7 @@ class VideoController extends Controller
             ]);
             foreach(Storage::disk('publicUploads')->allFiles($video->image_Location.'/original') as $image) {                
                 $thumbfile = str_replace('original','thumbs',$image);
-                Image::make($image)->resize(224,126)->save($thumbfile);                
+                Image::make(public_path($image))->resize(224,126)->save($thumbfile);                
             }
         }
     }
