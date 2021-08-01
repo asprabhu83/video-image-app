@@ -49,11 +49,7 @@ class ConvertVideoForStreaming implements ShouldQueue
         $diskName = Storage::build([
             'driver' => 'local',
             'root' => public_path('uploads/' . $this->video->image_Location.'/original'),
-        ]);
-        $thumbdiskName = Storage::build([
-            'driver' => 'local',
-            'root' => public_path('uploads/' . $this->video->image_Location.'/thumbs'),
-        ]);
+        ]);        
         $fps = $this->video->fps;
         for ($secs = 0; $secs <= $durationInSeconds; $secs++) {
             if($fps > 1){

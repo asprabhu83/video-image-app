@@ -66,12 +66,12 @@ class VideoController extends Controller
     }
 
     public function createThumbs(Request $request){
-        $videos = Video::where('project_id', $request->project_id)->get();
-        $thumbdiskName = Storage::build([
-            'driver' => 'local',
-            'root' => public_path('uploads/' . $this->video->image_Location.'/thumbs'),
-        ]);
+        $videos = Video::where('project_id', $request->project_id)->get();        
         foreach($videos as $video) {
+            $thumbdiskName = Storage::build([
+                'driver' => 'local',
+                'root' => public_path('uploads/' . $video->image_Location.'/thumbs'),
+            ]);
             foreach(Storage::disk('publicUploads')->allFiles($video->image_Location.'/original') as $image) {                
                 $imageName = $image->getClientOriginalName();
                 $fileName =  $thumbdiskName . $imageName;
