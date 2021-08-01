@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Laravel\Passport\RefreshToken;
 use Laravel\Passport\Token;
 
@@ -17,9 +18,10 @@ class UserController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required|confirmed',
             'user_role' => 'required|max:255',
+            'phone' => 'required'
         ]);
 
-        $data['password'] = md5($request->password);
+        $data['password'] = bcrypt($request->password);
 
         $user = User::create($data);
 
@@ -41,8 +43,15 @@ class UserController extends Controller
         }else{
             $token = auth()->user()->createToken('API Token')->accessToken;
 
+            $user_role=auth()->user()->user_role;
 
-            return response(['status' => '200','user' => auth()->user(),'message' => 'success', 'token' => $token]);
+           $permission_id = DB::table('userroles')
+           ->select('userroles.permission_id')->where('userroles.user_role',$user_role)
+           ->get();
+
+
+
+            return response(['status' => '200','user' => auth()->user(),'user_role' => auth()->user()->user_role , 'permission_id' => $permission_id, 'message' => 'success', 'token' => $token]);
         }
 
         

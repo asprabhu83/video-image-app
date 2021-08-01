@@ -58,3 +58,14 @@ Route::group(['prefix' => 'permission'], function()
     Route::delete('/delete/{id}', 'PermissionController@delete');
 }); 
 
+
+//user role table
+
+Route::group(['prefix' => 'userrole'], function()  
+{  
+    Route::post('/store', 'UserRoleController@store');
+    Route::get('/index', 'UserRoleController@index');
+    Route::get('/show/{id}', 'UserRoleController@show');
+    Route::put('/update/{id}', 'UserRoleController@update');
+    Route::delete('/delete/{id}', 'UserRoleController@delete');
+}); 
