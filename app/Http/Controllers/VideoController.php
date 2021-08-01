@@ -61,7 +61,8 @@ class VideoController extends Controller
         $video->save();
         return response()->json([
             "success" => true,
-            "message" => "File successfully uploaded"
+            "message" => "File successfully uploaded",
+            "last_insert_id" => $video->id
         ]);
     }
 
