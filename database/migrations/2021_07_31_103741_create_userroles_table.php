@@ -17,7 +17,7 @@ class CreateUserrolesTable extends Migration
             $table->id();
             $table->string('user_role');
             $table->string('description')->nullable();
-            $table->json('permission_id');
+            $table->string('permission_id');
             $table->timestamps();
         });
     }

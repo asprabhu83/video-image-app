@@ -18,8 +18,14 @@ class UserSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@drilld.com',
             'password' => $pwd,
-            'user_role' => 'admin',
-            'phone' => 987654321
+            'user_role' => 'super admin',
+            'phone' => '987654321'
         ]);
+
+        DB::table('permissions')->insert([
+            'permission_name' => 'create',
+            'description' => 'user have permission to read the files',
+        ]);
+
     }
 }
