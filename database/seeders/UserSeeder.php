@@ -13,19 +13,20 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $pwd = bcrypt('admin');
+        $pwd = bcrypt('Welcome@123#');
         DB::table('users')->insert([
             'name' => 'admin',
-            'email' => 'admin@drilld.com',
+            'email' => 'sivan@drill-d.co.il',
             'password' => $pwd,
-            'user_role' => 'super admin',
-            'phone' => '987654321'
+            'user_role' => 'super_admin',
+            'phone' => '0509263623'
         ]);
 
-        DB::table('permissions')->insert([
-            'permission_name' => 'create',
-            'description' => 'user have permission to read the files',
-        ]);
+        $permissions = [
+            ['id' => 1, 'permission_name' => 'create project', 'description' => 'user have permission to create the files'],
+            ['id' => 2, 'permission_name' => 'edit project', 'description' => 'user have permission to edit the files'],
+        ];
 
+        DB::table('permissions')->insert($permissions);
     }
 }
