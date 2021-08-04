@@ -42,7 +42,7 @@ Route::group(['prefix' => 'users'], function()
 
     Route::middleware('auth:api')->get('/currentUser','UserController@currentUser');
 
-    Route::post('/logout','UserController@logout');
+    Route::middleware('auth:api')->get('/logout','UserController@logout');
 
 }); 
 
