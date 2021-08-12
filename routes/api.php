@@ -68,3 +68,5 @@ Route::group(['prefix' => 'userrole'], function()
     Route::put('/update/{id}', 'UserRoleController@update');
     Route::delete('/delete/{id}', 'UserRoleController@delete');
 }); 
+
+Route::post('send_test_email', 'MailController@mail');
